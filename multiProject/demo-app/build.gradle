@@ -1,0 +1,14 @@
+repositories {
+	mavenLocal()
+	mavenCentral()
+}
+
+dependencies {
+	compile project(':logger')
+	compile 'org.apache.commons:commons-lang3:3.3.2'
+}
+
+task runDemoApp(type: JavaExec) {
+	main = "demo.MainApp"
+	classpath = sourceSets.main.runtimeClasspath
+}

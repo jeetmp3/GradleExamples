@@ -1,0 +1,15 @@
+task printMessage << {
+	println "Task is executing"
+}
+
+printMessage.doFirst {
+	println "Initializing task"
+}
+
+printMessage.doLast {
+	println "Task executed successfully"
+}
+
+
+
+

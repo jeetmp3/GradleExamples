@@ -1,0 +1,5 @@
+task hello {
+	println "Configuring ${name} task ............................................."
+}
+
+hello << { println "------------- executing ${name.toUpperCase()} task -----------" }

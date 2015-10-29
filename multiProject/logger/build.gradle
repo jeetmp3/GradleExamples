@@ -1,0 +1,10 @@
+apply plugin: 'groovy'
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+}
+
+dependencies {
+	compile localGroovy()
+}

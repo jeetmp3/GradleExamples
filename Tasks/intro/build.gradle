@@ -1,0 +1,21 @@
+task one << {
+	println "I am ${name} task"
+}
+
+task two(dependsOn: 'one') << {
+	println "I am ${name} task"
+}
+
+task(three, dependsOn: 'two') << {
+	println "I am ${name} task"
+}
+
+task four << {
+	println "My name is ${name}"
+}
+
+four << { println "Extended" }
+
+four.dependsOn three
+
+defaultTasks = ['one']

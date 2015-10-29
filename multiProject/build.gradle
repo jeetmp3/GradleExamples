@@ -1,0 +1,17 @@
+project(":demo-app") {
+	apply plugin: 'java'
+}
+
+apply plugin: 'idea'
+allprojects {
+	task printName << {
+		println "Project [ ${name} ]"
+	}
+}
+
+
+subprojects {
+	task printDescription << {
+		println "Description -> [ ${description} ]"
+	}
+}

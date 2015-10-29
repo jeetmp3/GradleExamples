@@ -1,0 +1,3 @@
+task hello << {
+	println "Project Task inside project.gradle"
+}

@@ -1,0 +1,14 @@
+apply plugin: 'java'
+
+sourceSets {
+	main {
+		java {
+			srcDirs = ["source"]
+		}
+	}
+}
+
+task runApp(type: JavaExec) {
+	main = "demo.App"
+	classpath sourceSets.main.runtimeClasspath
+}

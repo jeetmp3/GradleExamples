@@ -1,0 +1,15 @@
+apply plugin: 'java'
+
+task abc {
+	doFirst () {
+		println "First"
+	}
+	println "ABC CONFIGURATION "
+}
+
+task xyz(dependsOn: 'abc') {
+}
+
+abc.dependsOn jar
+
+println "BUILD GRADLE CONFIGURATION"

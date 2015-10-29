@@ -1,0 +1,25 @@
+
+apply plugin: 'groovy'
+
+task runApp(type: JavaExec) {
+	main = "demo.App"
+	classpath sourceSets.main.runtimeClasspath
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	//compile 'org.codehaus.groovy:groovy-all:2.3.6'
+	compile localGroovy()
+}
+
+jar {
+	from files(sourceSets.main.output.classesDir)
+	manifest.attributes "Main-Class": "demo.App"
+}
+
+//fatJar {
+//	manifest.attributes "Main-Class": "demo.App"
+//}

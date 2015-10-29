@@ -1,0 +1,10 @@
+task hello << {
+	println "Hello"
+	println "World"
+}
+
+task world {
+	println "ABCDEG"
+}
+
+world << {println "EXECUTION" }

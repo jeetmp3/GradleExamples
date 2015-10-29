@@ -1,0 +1,11 @@
+apply plugin: 'java'
+
+
+task runApp(type: JavaExec) {
+	main = "demo.App"
+	classpath sourceSets.main.runtimeClasspath
+}
+
+jar {
+	manifest.attributes "Main-Class": "demo.App"
+}

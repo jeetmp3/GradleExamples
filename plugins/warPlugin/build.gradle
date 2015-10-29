@@ -1,0 +1,26 @@
+apply plugin: 'war'
+apply plugin: 'jetty'
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+}
+
+dependencies {
+  compile "javax.servlet:servlet-api:2.5"
+}
+
+
+httpPort = 8080
+stopPort = 9080
+stopKey = "stopKey"
+
+
+war {
+  baseName = "GRADLE-WEB-APP"
+  appendix = "DEMO"
+  version = "1.0"
+  classifier = "SNAPSHOT"
+  extension = "ear"
+}
+

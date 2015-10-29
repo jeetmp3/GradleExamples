@@ -1,0 +1,6 @@
+task table << {
+	int n = number as Integer
+	(1..10).step(1) {
+		println "$number * ${it} = ${n * it}"
+	}
+}

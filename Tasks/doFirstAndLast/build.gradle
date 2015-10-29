@@ -1,0 +1,23 @@
+task printMessage
+printMessage << {
+	println "Task is executing"
+}
+
+printMessage.doFirst {
+	println "Initializing task"
+}
+
+printMessage.doLast {
+	println "Task executed successfully"
+}
+
+
+defaultTasks = ['a']
+
+task a << {
+println "task a"
+}
+
+task b(dependsOn: 'a') << {
+println "task b"
+}
