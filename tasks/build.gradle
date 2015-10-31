@@ -1,0 +1,30 @@
+task copyFiles(type: Copy) {
+from 'dir1'
+into 'dir2'
+}
+
+task loadDB << {
+	println "DB Loaded successfully"
+}
+
+loadDB.onlyIf {
+	System.properties['db.url'] == 'true'
+}
+
+task compile(description: 'Compiles Java source files') << {
+	throw NullPointerException("NullPointerException in string.length()")
+	println "Compiling 45 files ..........."
+}
+
+task run(dependsOn: compile) << {
+	if(tasks.compile.didWork) {
+		println "Compile successfull now running the code............"
+	} else {
+		println "2 errors found"
+
+		println compile.dump()
+	}
+}
+
+run.description = 'Run Java class files'
+compile.enabled = false

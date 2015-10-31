@@ -1,0 +1,1 @@
+task runApp(dependsOn: ':DemoApplication:run'){}

@@ -1,0 +1,9 @@
+task callMe 
+
+callMe << {
+	println "Executing callMe"
+}
+
+callMe.onlyIf {
+	return true
+}

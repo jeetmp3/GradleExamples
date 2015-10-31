@@ -16,10 +16,8 @@ dependencies {
 }
 
 jar {
-	from files(sourceSets.main.output.classesDir)
+//	from files(sourceSets.main.output.classesDir)
+	from configurations.runtime.asFileTree.files.collect { zipTree(it) }
 	manifest.attributes "Main-Class": "demo.App"
 }
 
-//fatJar {
-//	manifest.attributes "Main-Class": "demo.App"
-//}
