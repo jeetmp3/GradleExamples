@@ -5,5 +5,13 @@ callMe << {
 }
 
 callMe.onlyIf {
-	return true
+	return (params == 'true')
 }
+
+task compile << {
+	if(callMe.didWork) {
+		println "Now compiling files"
+	}
+}
+
+defaultTasks = ['callMe']

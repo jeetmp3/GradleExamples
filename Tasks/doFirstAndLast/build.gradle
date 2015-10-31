@@ -4,20 +4,18 @@ printMessage << {
 }
 
 printMessage.doFirst {
-	println "Initializing task"
+	println "Initializing task1"
+}
+
+printMessage.doFirst {
+        println "Initializing task2"
+}
+
+
+printMessage.doLast {
+	println "Task executed successfully1"
 }
 
 printMessage.doLast {
-	println "Task executed successfully"
-}
-
-
-defaultTasks = ['a']
-
-task a << {
-println "task a"
-}
-
-task b(dependsOn: 'a') << {
-println "task b"
+        println "Task executed successfully2"
 }

@@ -1,0 +1,1698 @@
+Script started on Saturday 31 October 2015 11:52:03 AM IST
+]0;ape@zoo: ~/ideaProjects/GradleExamples/pluginsape@zoo:~/ideaProjects/GradleExamples/plugins$ l[Kcd sr[Kcript/
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/scriptape@zoo:~/ideaProjects/GradleExamples/plugins/script$ ls
+build.gradle  project.gradle
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/scriptape@zoo:~/ideaProjects/GradleExamples/plugins/script$ vim build.gradle 
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;42r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[42;1H"build.gradle" 1L, 29C[>c[1;1Happly from: 'project.gradle'
+[1m[34m~                                                                                                                              [3;1H~                                                                                                                              [4;1H~                                                                                                                              [5;1H~                                                                                                                              [6;1H~                                                                                                                              [7;1H~                                                                                                                              [8;1H~                                                                                                                              [9;1H~                                                                                                                              [10;1H~                                                                                                                              [11;1H~                                                                                                                              [12;1H~                                                                                                                              [13;1H~                                                                                                                              [14;1H~                                                                                                                              [15;1H~                                                                                                                              [16;1H~                                                                                                                              [17;1H~                                                                                                                              [18;1H~                                                                                                                              [19;1H~                                                                                                                              [20;1H~                                                                                                                              [21;1H~                                                                                                                              [22;1H~                                                                                                                              [23;1H~                                                                                                                              [24;1H~                                                                                                                              [25;1H~                                                                                                                              [26;1H~                                                                                                                              [27;1H~                                                                                                                              [28;1H~                                                                                                                              [29;1H~                                                                                                                              [30;1H~                                                                                                                              [31;1H~                                                                                                                              [32;1H~                                                                                                                              [33;1H~                                                                                                                              [34;1H~                                                                                                                              [35;1H~                                                                                                                              [36;1H~                                                                                                                              [37;1H~                                                                                                                              [38;1H~                                                                                                                              [39;1H~                                                                                                                              [40;1H~                                                                                                                              [41;1H~                                                                                                                              [m[42;110H1,1[11CAll[1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[42;1H[K[42;1H:[?12l[?25h[?25l[109C1,1[11CAll[1;1H[?12l[?25h[?25l[42;1H[K[42;1H:[?12l[?25hq[?25l[?12l[?25h[?25l[42;1H[K[42;1H[?1l>[?12l[?25h[?1049l]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/scriptape@zoo:~/ideaProjects/GradleExamples/plugins/script$ ls
+build.gradle  project.gradle
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/scriptape@zoo:~/ideaProjects/GradleExamples/plugins/script$ cat build.gradle 
+apply from: 'project.gradle'
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/scriptape@zoo:~/ideaProjects/GradleExamples/plugins/script$ cat project.gradle 
+task hello << {
+	println "Project Task inside project.gradle"
+}
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/scriptape@zoo:~/ideaProjects/GradleExamples/plugins/script$ cd ../javaPlugin
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ ls
+[0m[01;34mbuild[0m  build.gradle  [01;34msrc[0m
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ cat bu[H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ cat build.gradle 
+apply plugin: 'java'
+
+
+task runApp(type: JavaExec) {
+	main = "demo.App"
+	classpath sourceSets.main.runtimeClasspath
+}
+
+jar {
+	manifest.attributes "Main-Class": "demo.App"
+}
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ l[Kgradle claen[K[K[Kea
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=1512m; support was removed in 8.0
+[0m[1m> Loading[22m[1m > settings[22m[11D[0K[7D[1mConfiguring[22m[1m > 0/1 projects[22m[1m > root project[22m[1m > Compiling script into cache[22m[30D[0K[1m > Compiling script into cache[22m[30D[0K[15D[0K[12D[1m1/1 projects[22m[15D[0K[13D[0K[1m> Building 0%[22m[1m > :clean[22m[9D[0K[13D[0K:clean
+[1m> Building 0%[22m[2D[1m100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KBUILD SUCCESSFUL
+[1m> Building 100%[22m[15D[0K[1A[16C
+[1m> Building 100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KTotal time: 2.899 secs
+[1m> Building 100%[22m[15D[0K
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.6/userguide/gradle_daemon.html
+[0m]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ tree
+The program 'tree' is currently not installed. You can install it by typing:
+sudo apt-get install tree
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ ls
+build.gradle  [0m[01;34msrc[0m
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ ls src/main/java/[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ksudo apt=[K-geti[K install tree
+[sudo] password for ape: 
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following NEW packages will be installed:
+  tree
+0 upgraded, 1 newly installed, 0 to remove and 16 not upgraded.
+Need to get 37.8 kB of archives.
+After this operation, 109 kB of additional disk space will be used.
+0% [Working]            Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/universe tree amd64 1.6.0-1 [37.8 kB]
+            3% [1 tree 1,147 B/37.8 kB 3%]                              100% [Working]              Fetched 37.8 kB in 0s (49.2 kB/s)
+Selecting previously unselected package tree.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 441405 files and directories currently installed.)
+Preparing to unpack .../tree_1.6.0-1_amd64.deb ...
+Unpacking tree (1.6.0-1) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up tree (1.6.0-1) ...
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ tree
+[01;34m.[00m
+|-- build.gradle
+`-- [01;34msrc[00m
+    `-- [01;34mmain[00m
+        `-- [01;34mjava[00m
+            `-- [01;34mdemo[00m
+                `-- App.java
+
+4 directories, 2 files
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ cat src/main/java/demo/App.java 
+package demo;
+
+import java.util.Date;
+
+public class App {
+	public static void main(String[] args) {
+		System.out.println("Current Time is : "+new Date().toString());
+	}
+}
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ cat build.gradle 
+apply plugin: 'java'
+
+
+task runApp(type: JavaExec) {
+	main = "demo.App"
+	classpath sourceSets.main.runtimeClasspath
+}
+
+jar {
+	manifest.attributes "Main-Class": "demo.App"
+}
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ tree
+[01;34m.[00m
+|-- build.gradle
+`-- [01;34msrc[00m
+    `-- [01;34mmain[00m
+        `-- [01;34mjava[00m
+            `-- [01;34mdemo[00m
+                `-- App.java
+
+4 directories, 2 files
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ gradle runApp
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=1512m; support was removed in 8.0
+[0m[1m> Loading[22m[1m > settings[22m[11D[0K[7D[1mConfiguring[22m[1m > 0/1 projects[22m[1m > root project[22m[15D[0K[12D[1m1/1 projects[22m[15D[0K[13D[0K[1m> Building 0%[22m[1m > :compileJava[22m[1m > Resolving dependencies ':compile'[22m[36D[0K[15D[0K[13D[0K:compileJava
+[1m> Building 0%[22m[2D[1m25%[22m[1m > :processResources[22m[20D[0K[14D[0K:processResources 
+[1m> Building 25%[22m[14D[0K[1A[18C[33mUP-TO-DATE[39m
+[1m> Building 25%[22m[14D[0K[1A[28C
+[1m> Building 25%[22m[3D[1m50%[22m[1m > :classes[22m[11D[0K[14D[0K:classes
+[1m> Building 50%[22m[3D[1m75%[22m[1m > :runApp[22m[1m > Resolving dependencies ':runtime'[22m[36D[0K[24D[0K:runApp
+[1m> Building 75% > :runApp[22m[24D[0KCurrent Time is : Sat Oct 31 11:56:42 IST 2015
+[1m> Building 75% > :runApp[22m[24D[0K[1A[46C
+[1m> Building 75% > :runApp[22m[10D[0K[3D[1m100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KBUILD SUCCESSFUL
+[1m> Building 100%[22m[15D[0K[1A[16C
+[1m> Building 100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KTotal time: 3.639 secs
+[1m> Building 100%[22m[15D[0K
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.6/userguide/gradle_daemon.html
+[0m]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ cat build.gradle 
+apply plugin: 'java'
+
+
+task runApp(type: JavaExec) {
+	main = "demo.App"
+	classpath sourceSets.main.runtimeClasspath
+}
+
+jar {
+	manifest.attributes "Main-Class": "demo.App"
+}
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ gradle jar
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=1512m; support was removed in 8.0
+[0m[1m> Loading[22m[1m > settings[22m[11D[0K[7D[1mConfiguring[22m[1m > 0/1 projects[22m[1m > root project[22m[15D[0K[12D[1m1/1 projects[22m[15D[0K[13D[0K[1m> Building 0%[22m[1m > :compileJava[22m[1m > Resolving dependencies ':compile'[22m[36D[0K[15D[0K[13D[0K:compileJava 
+[1m> Building 0%[22m[13D[0K[1A[13C[33mUP-TO-DATE[39m
+[1m> Building 0%[22m[13D[0K[1A[23C
+[1m> Building 0%[22m[2D[1m25%[22m[1m > :processResources[22m[20D[0K[14D[0K:processResources 
+[1m> Building 25%[22m[14D[0K[1A[18C[33mUP-TO-DATE[39m
+[1m> Building 25%[22m[14D[0K[1A[28C
+[1m> Building 25%[22m[3D[1m50%[22m[1m > :classes[22m[11D[0K[14D[0K:classes 
+[1m> Building 50%[22m[14D[0K[1A[9C[33mUP-TO-DATE[39m
+[1m> Building 50%[22m[14D[0K[1A[19C
+[1m> Building 50%[22m[3D[1m75%[22m[1m > :jar[22m[7D[0K[14D[0K:jar
+[1m> Building 75%[22m[3D[1m100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KBUILD SUCCESSFUL
+[1m> Building 100%[22m[15D[0K[1A[16C
+[1m> Building 100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KTotal time: 2.468 secs
+[1m> Building 100%[22m[15D[0K
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.6/userguide/gradle_daemon.html
+[0m]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ tree
+[01;34m.[00m
+|-- [01;34mbuild[00m
+|   |-- [01;34mclasses[00m
+|   |   `-- [01;34mmain[00m
+|   |       `-- [01;34mdemo[00m
+|   |           `-- App.class
+|   |-- [01;34mdependency-cache[00m
+|   |-- [01;34mlibs[00m
+|   |   `-- [01;31mjavaPlugin.jar[00m
+|   `-- [01;34mtmp[00m
+|       |-- [01;34mcompileJava[00m
+|       `-- [01;34mjar[00m
+|           `-- MANIFEST.MF
+|-- build.gradle
+`-- [01;34msrc[00m
+    `-- [01;34mmain[00m
+        `-- [01;34mjava[00m
+            `-- [01;34mdemo[00m
+                `-- App.java
+
+13 directories, 5 files
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ tree
+[01;34m.[00m
+|-- [01;34mbuild[00m
+|   |-- [01;34mclasses[00m
+|   |   `-- [01;34mmain[00m
+|   |       `-- [01;34mdemo[00m
+|   |           `-- App.class
+|   |-- [01;34mdependency-cache[00m
+|   |-- [01;34mlibs[00m
+|   |   `-- [01;31mjavaPlugin.jar[00m
+|   `-- [01;34mtmp[00m
+|       |-- [01;34mcompileJava[00m
+|       `-- [01;34mjar[00m
+|           `-- MANIFEST.MF
+|-- build.gradle
+`-- [01;34msrc[00m
+    `-- [01;34mmain[00m
+        `-- [01;34mjava[00m
+            `-- [01;34mdemo[00m
+                `-- App.java
+
+13 directories, 5 files
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ java -jar build/j[Klibs/javaPlugin.jar 
+Current Time is : Sat Oct 31 11:58:21 IST 2015
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ cat build.gradle [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ vim g[Kbuild.gradle 
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;42r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[42;1H"build.gradle" 11L, 173C[>c[1;1Happly plugin: 'java'
+
+
+task runApp(type: JavaExec) {[5;9Hmain = "demo.App"[6;9Hclasspath sourceSets.main.runtimeClasspath
+}
+
+jar {[10;9Hmanifest.attributes "Main-Class": "demo.App"
+}
+[1m[34m~                                                                                                                              [13;1H~                                                                                                                              [14;1H~                                                                                                                              [15;1H~                                                                                                                              [16;1H~                                                                                                                              [17;1H~                                                                                                                              [18;1H~                                                                                                                              [19;1H~                                                                                                                              [20;1H~                                                                                                                              [21;1H~                                                                                                                              [22;1H~                                                                                                                              [23;1H~                                                                                                                              [24;1H~                                                                                                                              [25;1H~                                                                                                                              [26;1H~                                                                                                                              [27;1H~                                                                                                                              [28;1H~                                                                                                                              [29;1H~                                                                                                                              [30;1H~                                                                                                                              [31;1H~                                                                                                                              [32;1H~                                                                                                                              [33;1H~                                                                                                                              [34;1H~                                                                                                                              [35;1H~                                                                                                                              [36;1H~                                                                                                                              [37;1H~                                                                                                                              [38;1H~                                                                                                                              [39;1H~                                                                                                                              [40;1H~                                                                                                                              [41;1H~                                                                                                                              [m[42;110H1,1[11CAll[1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[42;110H2,0-1[2;1H[?12l[?25h[?25l[42;110H1,1  [1;1H[?12l[?25h[?25l[42;1H[1m-- INSERT --[m[42;13H[K[42;110H1,1[11CAll[1;1H[?12l[?25h[?25l/apply plugin: 'java'[42;112H2[1;2H[?12l[?25h[?25l!apply plugin: 'java'[42;112H3[1;3H[?12l[?25h[?25lapply plugin: 'java'[1;22H[K[42;112H2[1;2H[?12l[?25h[?25l*apply plugin: 'java'[42;112H3[1;3H[?12l[?25h[?25l[42;110H2,1[2;1H[?12l[?25h[?25l[42;110H3[3;1H[?12l[?25h[?25l[42;110H4,3[4;3H[?12l[?25h[?25l[42;110H5,1[5;1H[?12l[?25h[?25l[42;110H6[6;1H[?12l[?25h[?25l[4;29H[46m{
+
+
+}[m[42;110H[K[42;110H7,2[11CAll[7;2H[?12l[?25h[?25l[4;29H{
+
+
+}[42;110H8,1[8;1H[?12l[?25h[?25l[42;110H9,3[9;3H[?12l[?25h[?25l[42;110H10,1[10;1H[?12l[?25h[?25l[9;5H[46m{
+
+}[m[42;110H[K[42;110H11,2[10CAll[11;2H[?12l[?25h[?25l[9;5H{
+
+}[12;1H[K[42;111H2,1[12;1H[?12l[?25h[?25l*[42;113H2[12;2H[?12l[?25h[?25l/[42;113H3[12;3H[?12l[?25h[42;1H[K[12;2H[?25l[42;110H12,2[10CAll[12;2H[?12l[?25h[?25l[42;110H[K[42;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"build.gradle" 12L, 178C written
+[?1l>[?12l[?25h[?1049l]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ cat build
+cat: build: Is a directory
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ cat build.gradle 
+/*apply plugin: 'java'
+
+
+task runApp(type: JavaExec) {
+	main = "demo.App"
+	classpath sourceSets.main.runtimeClasspath
+}
+
+jar {
+	manifest.attributes "Main-Class": "demo.App"
+}
+*/
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ gradle tasks
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=1512m; support was removed in 8.0
+[0m[1m> Loading[22m[1m > settings[22m[11D[0K[7D[1mConfiguring[22m[1m > 0/1 projects[22m[1m > root project[22m[1m > Compiling script into cache[22m[30D[0K[1m > Compiling script into cache[22m[30D[0K[15D[0K[12D[1m1/1 projects[22m[15D[0K[13D[0K[1m> Building 0%[22m[1m > :tasks[22m[22D[0K:tasks
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0K------------------------------------------------------------
+[1m> Building 0% > :tasks[22m[22D[0KAll tasks runnable from root project
+[1m> Building 0% > :tasks[22m[22D[0K------------------------------------------------------------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[60C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KBuild Setup tasks
+[1m> Building 0% > :tasks[22m[22D[0K-----------------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[17C
+[1m> Building 0% > :tasks[22m[22D[0K[32minit[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[4C[33m - Initializes a new Gradle build. [incubating][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[51C
+[1m> Building 0% > :tasks[22m[22D[0K[32mwrapper[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[7C[33m - Generates Gradle wrapper files. [incubating][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[54C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KHelp tasks
+[1m> Building 0% > :tasks[22m[22D[0K----------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[10C
+[1m> Building 0% > :tasks[22m[22D[0K[32mcomponents[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[10C[33m - Displays the components produced by root project 'javaPlugin'. [incubating][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[88C
+[1m> Building 0% > :tasks[22m[22D[0K[32mdependencies[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[12C[33m - Displays all dependencies declared in root project 'javaPlugin'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[79C
+[1m> Building 0% > :tasks[22m[22D[0K[32mdependencyInsight[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[17C[33m - Displays the insight into a specific dependency in root project 'javaPlugin'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[97C
+[1m> Building 0% > :tasks[22m[22D[0K[32mhelp[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[4C[33m - Displays a help message.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[31C
+[1m> Building 0% > :tasks[22m[22D[0K[32mmodel[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[5C[33m - Displays the configuration model of root project 'javaPlugin'. [incubating][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[83C
+[1m> Building 0% > :tasks[22m[22D[0K[32mprojects[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[8C[33m - Displays the sub-projects of root project 'javaPlugin'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[66C
+[1m> Building 0% > :tasks[22m[22D[0K[32mproperties[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[10C[33m - Displays the properties of root project 'javaPlugin'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[66C
+[1m> Building 0% > :tasks[22m[22D[0K[32mtasks[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[5C[33m - Displays the tasks runnable from root project 'javaPlugin'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[67C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KTo see all tasks and more detail, run 
+[1m> Building 0% > :tasks[22m[22D[0K[1A[38C[1mgradle[22m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[44C[1m [22m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[45C[1mtasks --all[22m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[56C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KTo see more detail about a task, run 
+[1m> Building 0% > :tasks[22m[22D[0K[1A[37C[1mgradle[22m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[43C[1m [22m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[44C[1mhelp --task <task>[22m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[62C
+[1m> Building 0% > :tasks[22m[9D[0K[2D[1m100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KBUILD SUCCESSFUL
+[1m> Building 100%[22m[15D[0K[1A[16C
+[1m> Building 100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KTotal time: 2.401 secs
+[1m> Building 100%[22m[15D[0K
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.6/userguide/gradle_daemon.html
+[0m]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ vim build.c[Kgradle 
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;42r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[42;1H"build.gradle" 12L, 178C[>c[1;1H/*apply plugin: 'java'
+
+
+task runApp(type: JavaExec) {[5;9Hmain = "demo.App"[6;9Hclasspath sourceSets.main.runtimeClasspath
+}
+
+jar {[10;9Hmanifest.attributes "Main-Class": "demo.App"
+}
+*/
+[1m[34m~                                                                                                                              [14;1H~                                                                                                                              [15;1H~                                                                                                                              [16;1H~                                                                                                                              [17;1H~                                                                                                                              [18;1H~                                                                                                                              [19;1H~                                                                                                                              [20;1H~                                                                                                                              [21;1H~                                                                                                                              [22;1H~                                                                                                                              [23;1H~                                                                                                                              [24;1H~                                                                                                                              [25;1H~                                                                                                                              [26;1H~                                                                                                                              [27;1H~                                                                                                                              [28;1H~                                                                                                                              [29;1H~                                                                                                                              [30;1H~                                                                                                                              [31;1H~                                                                                                                              [32;1H~                                                                                                                              [33;1H~                                                                                                                              [34;1H~                                                                                                                              [35;1H~                                                                                                                              [36;1H~                                                                                                                              [37;1H~                                                                                                                              [38;1H~                                                                                                                              [39;1H~                                                                                                                              [40;1H~                                                                                                                              [41;1H~                                                                                                                              [m[42;110H1,1[11CAll[1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[42;1H[1m-- INSERT --[m[42;13H[K[42;110H1,1[11CAll[1;1H[?12l[?25h[?25l[42;112H2[1;2H[?12l[?25h[?25l[42;112H3[1;3H[?12l[?25h[?25l\apply plugin: 'java'[42;112H4[1;4H[?12l[?25h[?25lapply plugin: 'java'[1;23H[K[42;112H3[1;3H[?12l[?25h[?25lapply plugin: 'java'[1;22H[K[42;112H2[1;2H[?12l[?25h[?25lapply plugin: 'java'[1;21H[K[42;112H1[1;1H[?12l[?25h[?25l[42;110H2[2;1H[?12l[?25h[?25l[42;110H3[3;1H[?12l[?25h[?25l[42;110H4[4;1H[?12l[?25h[?25l[42;110H5[5;1H[?12l[?25h[?25l[42;110H6[6;1H[?12l[?25h[?25l[4;29H[46m{
+
+
+}[m[42;110H7[7;1H[?12l[?25h[?25l[4;29H{
+
+
+}[42;110H8[8;1H[?12l[?25h[?25l[42;110H9[9;1H[?12l[?25h[?25l[42;110H10,1[10;1H[?12l[?25h[?25l[9;5H[46m{
+
+}[m[42;111H1[11;1H[?12l[?25h[?25l[9;5H{
+
+}[42;111H2[12;1H[?12l[?25h[?25l[42;113H2[12;2H[?12l[?25h[?25l[42;113H3[12;3H[?12l[?25h[?25l[12;2H[K[42;113H2[12;2H[?12l[?25h[?25l[12;1H[K[42;113H1[12;1H[?12l[?25h[?25l[9;5H[46m{
+
+}[m[42;111H1[11;1H[?12l[?25h[?25l[9;5H{
+
+}[42;111H0[10;1H[?12l[?25h[?25l[42;110H9,1 [9;1H[?12l[?25h[?25l[42;110H8[8;1H[?12l[?25h[?25l[4;29H[46m{
+
+
+}[m[42;110H7[7;1H[?12l[?25h[?25l[4;29H{
+
+
+}[42;110H6[6;1H[?12l[?25h[?25l[42;110H5[5;1H[?12l[?25h[?25l[42;110H4[4;1H[?12l[?25h[?25l[42;110H3[3;1H[?12l[?25h[?25l/[42;112H2[3;2H[?12l[?25h[?25l*[42;112H3[3;3H[?12l[?25h[?25l[42;110H4[4;3H[?12l[?25h[?25l[42;110H5,1[5;1H[?12l[?25h[?25l[42;110H6[6;1H[?12l[?25h[?25l[4;29H[46m{
+
+
+}[m[42;110H[K[42;110H7,2[11CAll[7;2H[?12l[?25h[?25l[4;29H{
+
+
+}[42;110H8,1[8;1H[?12l[?25h[?25l[42;110H9,3[9;3H[?12l[?25h[?25l[42;110H10,1[10;1H[?12l[?25h[?25l[9;5H[46m{
+
+}[m[42;110H[K[42;110H11,2[10CAll[11;2H[?12l[?25h[?25l[9;5H{
+
+}[42;111H2,1[12;1H[?12l[?25h[?25l*[42;113H2[12;2H[?12l[?25h[?25l/[42;113H3[12;3H[?12l[?25h[42;1H[K[12;2H[?25l[42;110H12,2[10CAll[12;2H[?12l[?25h[?25l[42;110H[K[42;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"build.gradle" 12L, 178C written
+[?1l>[?12l[?25h[?1049l]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ gradle tasks
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=1512m; support was removed in 8.0
+[0m[1m> Loading[22m[1m > settings[22m[11D[0K[7D[1mConfiguring[22m[1m > 0/1 projects[22m[1m > root project[22m[1m > Compiling script into cache[22m[30D[0K[1m > Compiling script into cache[22m[30D[0K[15D[0K[12D[1m1/1 projects[22m[15D[0K[13D[0K[1m> Building 0%[22m[1m > :tasks[22m[22D[0K:tasks
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0K------------------------------------------------------------
+[1m> Building 0% > :tasks[22m[22D[0KAll tasks runnable from root project
+[1m> Building 0% > :tasks[22m[22D[0K------------------------------------------------------------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[60C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KBuild tasks
+[1m> Building 0% > :tasks[22m[22D[0K-----------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[11C
+[1m> Building 0% > :tasks[22m[22D[0K[32massemble[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[8C[33m - Assembles the outputs of this project.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[49C
+[1m> Building 0% > :tasks[22m[22D[0K[32mbuild[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[5C[33m - Assembles and tests this project.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[41C
+[1m> Building 0% > :tasks[22m[22D[0K[32mbuildDependents[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[15C[33m - Assembles and tests this project and all projects that depend on it.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[86C
+[1m> Building 0% > :tasks[22m[22D[0K[32mbuildNeeded[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[11C[33m - Assembles and tests this project and all projects it depends on.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[78C
+[1m> Building 0% > :tasks[22m[22D[0K[32mclasses[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[7C[33m - Assembles classes 'main'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[35C
+[1m> Building 0% > :tasks[22m[22D[0K[32mclean[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[5C[33m - Deletes the build directory.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[36C
+[1m> Building 0% > :tasks[22m[22D[0K[32mjar[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[3C[33m - Assembles a jar archive containing the main classes.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[58C
+[1m> Building 0% > :tasks[22m[22D[0K[32mtestClasses[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[11C[33m - Assembles classes 'test'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[39C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KBuild Setup tasks
+[1m> Building 0% > :tasks[22m[22D[0K-----------------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[17C
+[1m> Building 0% > :tasks[22m[22D[0K[32minit[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[4C[33m - Initializes a new Gradle build. [incubating][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[51C
+[1m> Building 0% > :tasks[22m[22D[0K[32mwrapper[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[7C[33m - Generates Gradle wrapper files. [incubating][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[54C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KDocumentation tasks
+[1m> Building 0% > :tasks[22m[22D[0K-------------------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[19C
+[1m> Building 0% > :tasks[22m[22D[0K[32mjavadoc[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[7C[33m - Generates Javadoc API documentation for the main source code.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[71C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KHelp tasks
+[1m> Building 0% > :tasks[22m[22D[0K----------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[10C
+[1m> Building 0% > :tasks[22m[22D[0K[32mcomponents[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[10C[33m - Displays the components produced by root project 'javaPlugin'. [incubating][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[88C
+[1m> Building 0% > :tasks[22m[22D[0K[32mdependencies[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[12C[33m - Displays all dependencies declared in root project 'javaPlugin'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[79C
+[1m> Building 0% > :tasks[22m[22D[0K[32mdependencyInsight[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[17C[33m - Displays the insight into a specific dependency in root project 'javaPlugin'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[97C
+[1m> Building 0% > :tasks[22m[22D[0K[32mhelp[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[4C[33m - Displays a help message.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[31C
+[1m> Building 0% > :tasks[22m[22D[0K[32mmodel[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[5C[33m - Displays the configuration model of root project 'javaPlugin'. [incubating][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[83C
+[1m> Building 0% > :tasks[22m[22D[0K[32mprojects[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[8C[33m - Displays the sub-projects of root project 'javaPlugin'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[66C
+[1m> Building 0% > :tasks[22m[22D[0K[32mproperties[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[10C[33m - Displays the properties of root project 'javaPlugin'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[66C
+[1m> Building 0% > :tasks[22m[22D[0K[32mtasks[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[5C[33m - Displays the tasks runnable from root project 'javaPlugin'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[67C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KVerification tasks
+[1m> Building 0% > :tasks[22m[22D[0K------------------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[18C
+[1m> Building 0% > :tasks[22m[22D[0K[32mcheck[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[5C[33m - Runs all checks.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[24C
+[1m> Building 0% > :tasks[22m[22D[0K[32mtest[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[4C[33m - Runs the unit tests.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[27C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KRules
+[1m> Building 0% > :tasks[22m[22D[0K-----
+[1m> Building 0% > :tasks[22m[22D[0K[1A[5C
+[1m> Building 0% > :tasks[22m[22D[0KPattern: clean<TaskName>: Cleans the output files of a task.
+[1m> Building 0% > :tasks[22m[22D[0KPattern: build<ConfigurationName>: Assembles the artifacts of a configuration.
+[1m> Building 0% > :tasks[22m[22D[0KPattern: upload<ConfigurationName>: Assembles and uploads the artifacts belonging to a configuration.
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KTo see all tasks and more detail, run 
+[1m> Building 0% > :tasks[22m[22D[0K[1A[38C[1mgradle[22m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[44C[1m [22m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[45C[1mtasks --all[22m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[56C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KTo see more detail about a task, run 
+[1m> Building 0% > :tasks[22m[22D[0K[1A[37C[1mgradle[22m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[43C[1m [22m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[44C[1mhelp --task <task>[22m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[62C
+[1m> Building 0% > :tasks[22m[9D[0K[2D[1m100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KBUILD SUCCESSFUL
+[1m> Building 100%[22m[15D[0K[1A[16C
+[1m> Building 100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KTotal time: 3.065 secs
+[1m> Building 100%[22m[15D[0K
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.6/userguide/gradle_daemon.html
+[0m]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ vim build.gradle 
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;42r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[42;1H"build.gradle" 12L, 178C[>c[1;1Happly plugin: 'java'
+
+/*
+task runApp(type: JavaExec) {[5;9Hmain = "demo.App"[6;9Hclasspath sourceSets.main.runtimeClasspath
+}
+
+jar {[10;9Hmanifest.attributes "Main-Class": "demo.App"
+}
+*/
+[1m[34m~                                                                                                                              [14;1H~                                                                                                                              [15;1H~                                                                                                                              [16;1H~                                                                                                                              [17;1H~                                                                                                                              [18;1H~                                                                                                                              [19;1H~                                                                                                                              [20;1H~                                                                                                                              [21;1H~                                                                                                                              [22;1H~                                                                                                                              [23;1H~                                                                                                                              [24;1H~                                                                                                                              [25;1H~                                                                                                                              [26;1H~                                                                                                                              [27;1H~                                                                                                                              [28;1H~                                                                                                                              [29;1H~                                                                                                                              [30;1H~                                                                                                                              [31;1H~                                                                                                                              [32;1H~                                                                                                                              [33;1H~                                                                                                                              [34;1H~                                                                                                                              [35;1H~                                                                                                                              [36;1H~                                                                                                                              [37;1H~                                                                                                                              [38;1H~                                                                                                                              [39;1H~                                                                                                                              [40;1H~                                                                                                                              [41;1H~                                                                                                                              [m[42;110H1,1[11CAll[1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[42;110H2,0-1[2;1H[?12l[?25h[?25l[42;110H3,1  [3;1H[?12l[?25h[?25l[42;110H4[4;1H[?12l[?25h[?25l[42;110H5,1-8[5;8H[?12l[?25h[?25l[42;110H6[6;8H[?12l[?25h[?25l[4;29H[46m{
+
+
+}[m[42;110H7,1  [7;1H[?12l[?25h[?25l[4;29H{
+
+
+}[42;110H8,0-1[8;1H[?12l[?25h[?25l[42;110H9,1  [9;1H[?12l[?25h[?25l[42;112H2[9;2H[?12l[?25h[?25l[42;112H3[9;3H[?12l[?25h[?25l[42;110H10,1-8[10;8H[?12l[?25h[?25l[42;113H2-9[10;9H[?12l[?25h[?25l[42;113H1-8[10;8H[?12l[?25h[?25l[42;113H2-9[10;9H[?12l[?25h[?25l[42;113H3-10[10;10H[?12l[?25h[?25l[42;113H4-11[10;11H[?12l[?25h[?25l[42;113H5-12[10;12H[?12l[?25h[?25l[9;5H[46m{
+
+}[m[42;110H9,5    [9;5H[?12l[?25h[?25l{
+
+}[42;110H8,0-1[8;1H[?12l[?25h[?25l[4;29H[46m{
+
+
+}[m[42;110H7,1  [7;1H[?12l[?25h[?25l[4;29H{
+
+
+}[42;110H6,5-12[6;12H[?12l[?25h[?25l[4;29H[46m{
+
+
+}[m[42;110H7,1   [7;1H[?12l[?25h[?25l[4;29H{
+
+
+}[42;110H8,0-1[8;1H[?12l[?25h[?25l
+jar [46m{
+
+}[m[42;110H9,5  [9;5H[?12l[?25h[?25l{
+
+}[42;110H10,5-12[10;12H[?12l[?25h[?25l[42;113H6-13[10;13H[?12l[?25h[?25l[42;113H7-14[10;14H[?12l[?25h[?25l[42;113H8-15[10;15H[?12l[?25h[?25l[42;113H9-16[10;16H[?12l[?25h[?25l[42;113H10-17[10;17H[?12l[?25h[?25l[42;113H9-16 [10;16H[?12l[?25h[?25l[42;113H8-15[10;15H[?12l[?25h[?25l[42;113H9-16[10;16H[?12l[?25h[?25l[42;113H10-17[10;17H[?12l[?25h[?25l[42;1H[K[42;1H:[?12l[?25hq[?25l[?12l[?25h[?25l[42;1H[K[42;1H[?1l>[?12l[?25h[?1049l]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ tree
+[01;34m.[00m
+|-- [01;34mbuild[00m
+|   |-- [01;34mclasses[00m
+|   |   `-- [01;34mmain[00m
+|   |       `-- [01;34mdemo[00m
+|   |           `-- App.class
+|   |-- [01;34mdependency-cache[00m
+|   |-- [01;34mlibs[00m
+|   |   `-- [01;31mjavaPlugin.jar[00m
+|   `-- [01;34mtmp[00m
+|       |-- [01;34mcompileJava[00m
+|       `-- [01;34mjar[00m
+|           `-- MANIFEST.MF
+|-- build.gradle
+`-- [01;34msrc[00m
+    `-- [01;34mmain[00m
+        `-- [01;34mjava[00m
+            `-- [01;34mdemo[00m
+                `-- App.java
+
+13 directories, 5 files
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ c[K cd[K[K[Kcd build/ja[K[Klibs/
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPlugin/build/libsape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin/build/libs$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPlugin/build/libsape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin/build/libs$ ls
+[0m[01;31mjavaPlugin.jar[0m
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPlugin/build/libsape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin/build/libs$ t[Kunzu[Kip javaPlugin.jar 
+Archive:  javaPlugin.jar
+   creating: META-INF/
+  inflating: META-INF/MANIFEST.MF    
+   creating: demo/
+  inflating: demo/App.class          
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPlugin/build/libsape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin/build/libs$ ls
+[0m[01;34mdemo[0m  [01;31mjavaPlugin.jar[0m  [01;34mMETA-INF[0m
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPlugin/build/libsape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin/build/libs$ tree
+[01;34m.[00m
+|-- [01;34mdemo[00m
+|   `-- App.class
+|-- [01;31mjavaPlugin.jar[00m
+`-- [01;34mMETA-INF[00m
+    `-- MANIFEST.MF
+
+2 directories, 3 files
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPlugin/build/libsape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin/build/libs$ vim META-INF/MANIFEST.MF 
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;42r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[42;1H"META-INF/MANIFEST.MF" [dos] 3L, 47C[>c[1;1HManifest-Version: 1.0
+Main-Class: demo.App
+
+[1m[34m~                                                                                                                              [5;1H~                                                                                                                              [6;1H~                                                                                                                              [7;1H~                                                                                                                              [8;1H~                                                                                                                              [9;1H~                                                                                                                              [10;1H~                                                                                                                              [11;1H~                                                                                                                              [12;1H~                                                                                                                              [13;1H~                                                                                                                              [14;1H~                                                                                                                              [15;1H~                                                                                                                              [16;1H~                                                                                                                              [17;1H~                                                                                                                              [18;1H~                                                                                                                              [19;1H~                                                                                                                              [20;1H~                                                                                                                              [21;1H~                                                                                                                              [22;1H~                                                                                                                              [23;1H~                                                                                                                              [24;1H~                                                                                                                              [25;1H~                                                                                                                              [26;1H~                                                                                                                              [27;1H~                                                                                                                              [28;1H~                                                                                                                              [29;1H~                                                                                                                              [30;1H~                                                                                                                              [31;1H~                                                                                                                              [32;1H~                                                                                                                              [33;1H~                                                                                                                              [34;1H~                                                                                                                              [35;1H~                                                                                                                              [36;1H~                                                                                                                              [37;1H~                                                                                                                              [38;1H~                                                                                                                              [39;1H~                                                                                                                              [40;1H~                                                                                                                              [41;1H~                                                                                                                              [m[42;110H1,1[11CAll[1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[42;112H2[1;2H[?12l[?25h[?25l[42;112H3[1;3H[?12l[?25h[?25l[42;112H4[1;4H[?12l[?25h[?25l[42;112H5[1;5H[?12l[?25h[?25l[42;112H6[1;6H[?12l[?25h[?25l[42;112H7[1;7H[?12l[?25h[?25l[42;110H2[2;7H[?12l[?25h[?25l[42;112H8[2;8H[?12l[?25h[?25l[42;112H9[2;9H[?12l[?25h[?25l[42;112H10[2;10H[?12l[?25h[?25l[42;113H1[2;11H[?12l[?25h[?25l[42;113H2[2;12H[?12l[?25h[?25l[42;113H3[2;13H[?12l[?25h[?25l[42;113H4[2;14H[?12l[?25h[?25l[42;113H5[2;15H[?12l[?25h[?25l[42;1H[K[42;1H:[?12l[?25hq[?25l[?12l[?25h[?25l[42;1H[K[42;1H[?1l>[?12l[?25h[?1049l]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPlugin/build/libsape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin/build/libs$ cd ../../
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ cd ../../[K[K[K[K[K[K[K[K[Kls
+[0m[01;34mbuild[0m  build.gradle  [01;34msrc[0m
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ cat src/main/java/demo/App.java 
+package demo;
+
+import java.util.Date;
+
+public class App {
+	public static void main(String[] args) {
+		System.out.println("Current Time is : "+new Date().toString());
+	}
+}
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ :q[K[Kcd [K[K[Kvim build.gradle 
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;42r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[42;1H"build.gradle" 12L, 178C[>c[1;1Happly plugin: 'java'
+
+/*
+task runApp(type: JavaExec) {[5;9Hmain = "demo.App"[6;9Hclasspath sourceSets.main.runtimeClasspath
+}
+
+jar {[10;9Hmanifest.attributes "Main-Class": "demo.App"
+}
+*/
+[1m[34m~                                                                                                                              [14;1H~                                                                                                                              [15;1H~                                                                                                                              [16;1H~                                                                                                                              [17;1H~                                                                                                                              [18;1H~                                                                                                                              [19;1H~                                                                                                                              [20;1H~                                                                                                                              [21;1H~                                                                                                                              [22;1H~                                                                                                                              [23;1H~                                                                                                                              [24;1H~                                                                                                                              [25;1H~                                                                                                                              [26;1H~                                                                                                                              [27;1H~                                                                                                                              [28;1H~                                                                                                                              [29;1H~                                                                                                                              [30;1H~                                                                                                                              [31;1H~                                                                                                                              [32;1H~                                                                                                                              [33;1H~                                                                                                                              [34;1H~                                                                                                                              [35;1H~                                                                                                                              [36;1H~                                                                                                                              [37;1H~                                                                                                                              [38;1H~                                                                                                                              [39;1H~                                                                                                                              [40;1H~                                                                                                                              [41;1H~                                                                                                                              [m[42;110H1,1[11CAll[1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[42;110H2,0-1[2;1H[?12l[?25h[?25l[42;110H3,1  [3;1H[?12l[?25h[?25l[42;110H4[4;1H[?12l[?25h[?25l[42;110H5,1-8[5;8H[?12l[?25h[?25l[42;110H6[6;8H[?12l[?25h[?25l[4;29H[46m{
+
+
+}[m[42;110H7,1  [7;1H[?12l[?25h[?25l[4;29H{
+
+
+}[42;110H8,0-1[8;1H[?12l[?25h[?25l[4;29H[46m{
+
+
+}[m[42;110H7,1  [7;1H[?12l[?25h[?25l[4;29H{
+
+
+}[42;110H6,1-8[6;8H[?12l[?25h[?25l[42;110H5[5;8H[?12l[?25h[?25l[42;110H4,1  [4;1H[?12l[?25h[?25l[42;110H5,1-8[5;8H[?12l[?25h[?25l[42;110H6[6;8H[?12l[?25h[?25l[42;1H[K[42;1H:[?12l[?25hq[?25l[?12l[?25h[?25l[42;1H[K[42;1H[?1l>[?12l[?25h[?1049l]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ gradle jar[K[K[Kclean 
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=1512m; support was removed in 8.0
+[0m[1m> Loading[22m[1m > settings[22m[11D[0K[7D[1mConfiguring[22m[1m > 0/1 projects[22m[1m > root project[22m[15D[0K[12D[1m1/1 projects[22m[15D[0K[13D[0K[1m> Building 0%[22m[1m > :clean[22m[9D[0K[13D[0K:clean
+[1m> Building 0%[22m[2D[1m100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KBUILD SUCCESSFUL
+[1m> Building 100%[22m[15D[0K[1A[16C
+[1m> Building 100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KTotal time: 2.29 secs
+[1m> Building 100%[22m[15D[0K
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.6/userguide/gradle_daemon.html
+[0m]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ tree
+[01;34m.[00m
+|-- build.gradle
+`-- [01;34msrc[00m
+    `-- [01;34mmain[00m
+        `-- [01;34mjava[00m
+            `-- [01;34mdemo[00m
+                `-- App.java
+
+4 directories, 2 files
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ gradle jar
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=1512m; support was removed in 8.0
+[0m[1m> Loading[22m[1m > settings[22m[11D[0K[7D[1mConfiguring[22m[1m > 0/1 projects[22m[1m > root project[22m[15D[0K[12D[1m1/1 projects[22m[15D[0K[13D[0K[1m> Building 0%[22m[1m > :compileJava[22m[1m > Resolving dependencies ':compile'[22m[36D[0K[15D[0K[13D[0K:compileJava
+[1m> Building 0%[22m[2D[1m25%[22m[1m > :processResources[22m[20D[0K[14D[0K:processResources 
+[1m> Building 25%[22m[14D[0K[1A[18C[33mUP-TO-DATE[39m
+[1m> Building 25%[22m[14D[0K[1A[28C
+[1m> Building 25%[22m[3D[1m50%[22m[1m > :classes[22m[11D[0K[14D[0K:classes
+[1m> Building 50%[22m[3D[1m75%[22m[1m > :jar[22m[7D[0K[14D[0K:jar
+[1m> Building 75%[22m[3D[1m100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KBUILD SUCCESSFUL
+[1m> Building 100%[22m[15D[0K[1A[16C
+[1m> Building 100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KTotal time: 2.974 secs
+[1m> Building 100%[22m[15D[0K
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.6/userguide/gradle_daemon.html
+[0m]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ tree
+[01;34m.[00m
+|-- [01;34mbuild[00m
+|   |-- [01;34mclasses[00m
+|   |   `-- [01;34mmain[00m
+|   |       `-- [01;34mdemo[00m
+|   |           `-- App.class
+|   |-- [01;34mdependency-cache[00m
+|   |-- [01;34mlibs[00m
+|   |   `-- [01;31mjavaPlugin.jar[00m
+|   `-- [01;34mtmp[00m
+|       |-- [01;34mcompileJava[00m
+|       `-- [01;34mjar[00m
+|           `-- MANIFEST.MF
+|-- build.gradle
+`-- [01;34msrc[00m
+    `-- [01;34mmain[00m
+        `-- [01;34mjava[00m
+            `-- [01;34mdemo[00m
+                `-- App.java
+
+13 directories, 5 files
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ java -j[H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ java -jar li[K[KB[Kbuild/libs/javaPlugin.jar 
+no main manifest attribute, in build/libs/javaPlugin.jar
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ ls ~/.m2
+[0m[01;34mrepository[0m
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ ls ~/.m2/repository/
+[0m[01;34mactivation[0m    [01;34mcglib[0m              [01;34mcommons-collections[0m  [01;34mcommons-net[0m        [01;34mjboss[0m      [01;34mlog4j[0m         [01;34mplexus[0m        [01;34mxom[0m
+[01;34mantlr[0m         [01;34mch[0m                 [01;34mcommons-el[0m           [01;34mcommons-validator[0m  [01;34mjdom[0m       [01;34mmysql[0m         [01;34mstax[0m          [01;34mxpp3[0m
+[01;34maopalliance[0m   [01;34mclassworlds[0m        [01;34mcommons-fileupload[0m   [01;34mdom4j[0m              [01;34mjline[0m      [01;34mnet[0m           [01;34mtaglibs[0m
+[01;34margs4j[0m        [01;34mcom[0m                [01;34mcommons-httpclient[0m   [01;34mhsqldb[0m             [01;34mjmagick[0m    [01;34mognl[0m          [01;34mxalan[0m
+[01;34masm[0m           [01;34mcommons-beanutils[0m  [01;34mcommons-io[0m           [01;34mio[0m                 [01;34mjoda-time[0m  [01;34mopensymphony[0m  [01;34mxerces[0m
+[01;34mbouncycastle[0m  [01;34mcommons-cli[0m        [01;34mcommons-lang[0m         [01;34mjavax[0m              [01;34mjtidy[0m      [01;34morg[0m           [01;34mxml-apis[0m
+[01;34mc3p0[0m          [01;34mcommons-codec[0m      [01;34mcommons-logging[0m      [01;34mjaxen[0m              [01;34mjunit[0m      [01;34moro[0m           [01;34mxml-resolver[0m
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ ls ~/.m2/repository/[1P[1P ~/.m2/repository/l ~/.m2/repository/s ~/.m2/repository/[C ~/.m2/repository/[1P~/.m2/repository/[1P/.m2/repository/[1P.m2/repository/[1Pm2/repository/[1P2/repository/[1P/repository/[1Prepository/[1Pepository/[1Ppository/[1Pository/[1Psitory/[1Pitory/[1Ptory/[1Pory/[1Pry/[1Py/[1P/[K.gr[K[K[K~/.grails
+[0m[01;34m2.2.1[0m  [01;34m2.3.4[0m  [01;34m2.3.8[0m  [01;34m2.4.4[0m  [01;34m2.4.5[0m  [01;34mivy-cache[0m  [01;34mrepository[0m  [01;34mscripts[0m
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ ls ~/.grails/repository/
+LICENSE  [0m[01;34mprofiles[0m  README.md
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/javaPluginape@zoo:~/ideaProjects/GradleExamples/plugins/javaPlugin$ cd ../groovyPlugin/
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ gradle clean
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=1512m; support was removed in 8.0
+[0m[1m> Loading[22m[1m > settings[22m[11D[0K[7D[1mConfiguring[22m[1m > 0/1 projects[22m[1m > root project[22m[1m > Compiling script into cache[22m[30D[0K[1m > Compiling script into cache[22m[30D[0K[15D[0K[12D[1m1/1 projects[22m[15D[0K[13D[0K[1m> Building 0%[22m[1m > :clean[22m[9D[0K[13D[0K:clean 
+[1m> Building 0%[22m[13D[0K[1A[7C[33mUP-TO-DATE[39m
+[1m> Building 0%[22m[13D[0K[1A[17C
+[1m> Building 0%[22m[2D[1m100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KBUILD SUCCESSFUL
+[1m> Building 100%[22m[15D[0K[1A[16C
+[1m> Building 100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KTotal time: 3.116 secs
+[1m> Building 100%[22m[15D[0K
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.6/userguide/gradle_daemon.html
+[0m]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ tree
+[01;34m.[00m
+|-- build.gradle
+`-- [01;34msrc[00m
+    `-- [01;34mmain[00m
+        `-- [01;34mgroovy[00m
+            `-- [01;34mdemo[00m
+                `-- App.groovy
+
+4 directories, 2 files
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ cat build.gradle [K[K[K[K[K[K[K[K[K[K[K[K[K[Ksr[K[K[K [Kt src/main/groovy/demo/App.groovy 
+package demo;
+
+println "Welcome in groovy world"
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ cat build.gradle 
+
+apply plugin: 'groovy'
+
+task runApp(type: JavaExec) {
+	main = "demo.App"
+	classpath sourceSets.main.runtimeClasspath
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	//compile 'org.codehaus.groovy:groovy-all:2.3.6'
+	compile localGroovy()
+}
+
+jar {
+	from files(sourceSets.main.output.classesDir)
+	manifest.attributes "Main-Class": "demo.App"
+}
+
+//fatJar {
+//	manifest.attributes "Main-Class": "demo.App"
+//}
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ gradle runAp
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=1512m; support was removed in 8.0
+[0m[1m> Loading[22m[1m > settings[22m[11D[0K[7D[1mConfiguring[22m[1m > 0/1 projects[22m[1m > root project[22m[15D[0K[12D[1m1/1 projects[22m[15D[0K[13D[0K[1m> Building 0%[22m[1m > :compileJava[22m[15D[0K[13D[0K:compileJava 
+[1m> Building 0%[22m[13D[0K[1A[13C[33mUP-TO-DATE[39m
+[1m> Building 0%[22m[13D[0K[1A[23C
+[1m> Building 0%[22m[2D[1m20%[22m[1m > :compileGroovy[22m[1m > Resolving dependencies ':compile'[22m[36D[0K[17D[0K[14D[0K:compileGroovy
+[1m> Building 20%[22m[3D[1m40%[22m[1m > :processResources[22m[20D[0K[14D[0K:processResources 
+[1m> Building 40%[22m[14D[0K[1A[18C[33mUP-TO-DATE[39m
+[1m> Building 40%[22m[14D[0K[1A[28C
+[1m> Building 40%[22m[3D[1m60%[22m[1m > :classes[22m[11D[0K[14D[0K:classes
+[1m> Building 60%[22m[3D[1m80%[22m[1m > :runApp[22m[1m > Resolving dependencies ':runtime'[22m[36D[0K[24D[0K:runApp
+[1m> Building 80% > :runApp[22m[24D[0KWelcome in groovy world
+[1m> Building 80% > :runApp[22m[24D[0K[1A[23C
+[1m> Building 80% > :runApp[22m[10D[0K[3D[1m100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KBUILD SUCCESSFUL
+[1m> Building 100%[22m[15D[0K[1A[16C
+[1m> Building 100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KTotal time: 4.412 secs
+[1m> Building 100%[22m[15D[0K
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.6/userguide/gradle_daemon.html
+[0m]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ gradle runAp[K[H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ tjr[K[Kree
+[01;34m.[00m
+|-- [01;34mbuild[00m
+|   |-- [01;34mclasses[00m
+|   |   `-- [01;34mmain[00m
+|   |       `-- [01;34mdemo[00m
+|   |           `-- App.class
+|   `-- [01;34mtmp[00m
+|       `-- [01;34mcompileGroovy[00m
+|           `-- [01;34mgroovy-java-stubs[00m
+|-- build.gradle
+`-- [01;34msrc[00m
+    `-- [01;34mmain[00m
+        `-- [01;34mgroovy[00m
+            `-- [01;34mdemo[00m
+                `-- App.groovy
+
+11 directories, 3 files
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ gradle jar
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=1512m; support was removed in 8.0
+[0m[1m> Loading[22m[1m > settings[22m[11D[0K[7D[1mConfiguring[22m[1m > 0/1 projects[22m[1m > root project[22m[15D[0K[12D[1m1/1 projects[22m[15D[0K[13D[0K[1m> Building 0%[22m[1m > :compileJava[22m[15D[0K[13D[0K:compileJava 
+[1m> Building 0%[22m[13D[0K[1A[13C[33mUP-TO-DATE[39m
+[1m> Building 0%[22m[13D[0K[1A[23C
+[1m> Building 0%[22m[2D[1m20%[22m[1m > :compileGroovy[22m[1m > Resolving dependencies ':compile'[22m[36D[0K[17D[0K[14D[0K:compileGroovy 
+[1m> Building 20%[22m[14D[0K[1A[15C[33mUP-TO-DATE[39m
+[1m> Building 20%[22m[14D[0K[1A[25C
+[1m> Building 20%[22m[3D[1m40%[22m[1m > :processResources[22m[20D[0K[14D[0K:processResources 
+[1m> Building 40%[22m[14D[0K[1A[18C[33mUP-TO-DATE[39m
+[1m> Building 40%[22m[14D[0K[1A[28C
+[1m> Building 40%[22m[3D[1m60%[22m[1m > :classes[22m[11D[0K[14D[0K:classes 
+[1m> Building 60%[22m[14D[0K[1A[9C[33mUP-TO-DATE[39m
+[1m> Building 60%[22m[14D[0K[1A[19C
+[1m> Building 60%[22m[3D[1m80%[22m[1m > :jar[22m[7D[0K[14D[0K:jar
+[1m> Building 80%[22m[3D[1m100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KBUILD SUCCESSFUL
+[1m> Building 100%[22m[15D[0K[1A[16C
+[1m> Building 100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KTotal time: 2.72 secs
+[1m> Building 100%[22m[15D[0K
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.6/userguide/gradle_daemon.html
+[0m]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ tree
+[01;34m.[00m
+|-- [01;34mbuild[00m
+|   |-- [01;34mclasses[00m
+|   |   `-- [01;34mmain[00m
+|   |       `-- [01;34mdemo[00m
+|   |           `-- App.class
+|   |-- [01;34mlibs[00m
+|   |   `-- [01;31mgroovyPlugin.jar[00m
+|   `-- [01;34mtmp[00m
+|       |-- [01;34mcompileGroovy[00m
+|       |   `-- [01;34mgroovy-java-stubs[00m
+|       `-- [01;34mjar[00m
+|           `-- MANIFEST.MF
+|-- build.gradle
+`-- [01;34msrc[00m
+    `-- [01;34mmain[00m
+        `-- [01;34mgroovy[00m
+            `-- [01;34mdemo[00m
+                `-- App.groovy
+
+13 directories, 5 files
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ jar [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ jar [K[K[K[Kjava 0[K=[K-jar build/libs/groovyPlugin.jar 
+Error: Could not find or load main class demo.App
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ cat build.gradle 
+
+apply plugin: 'groovy'
+
+task runApp(type: JavaExec) {
+	main = "demo.App"
+	classpath sourceSets.main.runtimeClasspath
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	//compile 'org.codehaus.groovy:groovy-all:2.3.6'
+	compile localGroovy()
+}
+
+jar {
+	from files(sourceSets.main.output.classesDir)
+	manifest.attributes "Main-Class": "demo.App"
+}
+
+//fatJar {
+//	manifest.attributes "Main-Class": "demo.App"
+//}
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ tree
+[01;34m.[00m
+|-- [01;34mbuild[00m
+|   |-- [01;34mclasses[00m
+|   |   `-- [01;34mmain[00m
+|   |       `-- [01;34mdemo[00m
+|   |           `-- App.class
+|   |-- [01;34mlibs[00m
+|   |   `-- [01;31mgroovyPlugin.jar[00m
+|   `-- [01;34mtmp[00m
+|       |-- [01;34mcompileGroovy[00m
+|       |   `-- [01;34mgroovy-java-stubs[00m
+|       `-- [01;34mjar[00m
+|           `-- MANIFEST.MF
+|-- build.gradle
+`-- [01;34msrc[00m
+    `-- [01;34mmain[00m
+        `-- [01;34mgroovy[00m
+            `-- [01;34mdemo[00m
+                `-- App.groovy
+
+13 directories, 5 files
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ treecat build.gradle 
+
+apply plugin: 'groovy'
+
+task runApp(type: JavaExec) {
+	main = "demo.App"
+	classpath sourceSets.main.runtimeClasspath
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	//compile 'org.codehaus.groovy:groovy-all:2.3.6'
+	compile localGroovy()
+}
+
+jar {
+	from files(sourceSets.main.output.classesDir)
+	manifest.attributes "Main-Class": "demo.App"
+}
+
+//fatJar {
+//	manifest.attributes "Main-Class": "demo.App"
+//}
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ cat build.gradle [Kcat src/main/groovy/demo/App.groovy 
+package demo;
+
+println "Welcome in groovy world"
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ gradle clean jar
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=1512m; support was removed in 8.0
+[0m[1m> Loading[22m[1m > settings[22m[11D[0K[7D[1mConfiguring[22m[1m > 0/1 projects[22m[1m > root project[22m[15D[0K[12D[1m1/1 projects[22m[15D[0K[13D[0K[1m> Building 0%[22m[1m > :clean[22m[9D[0K[13D[0K:clean
+[1m> Building 0%[22m[2D[1m16%[22m[1m > :compileJava[22m[15D[0K[14D[0K:compileJava 
+[1m> Building 16%[22m[14D[0K[1A[13C[33mUP-TO-DATE[39m
+[1m> Building 16%[22m[14D[0K[1A[23C
+[1m> Building 16%[22m[3D[1m33%[22m[1m > :compileGroovy[22m[1m > Resolving dependencies ':compile'[22m[36D[0K[17D[0K[14D[0K:compileGroovy
+[1m> Building 33%[22m[3D[1m50%[22m[1m > :processResources[22m[20D[0K[14D[0K:processResources 
+[1m> Building 50%[22m[14D[0K[1A[18C[33mUP-TO-DATE[39m
+[1m> Building 50%[22m[14D[0K[1A[28C
+[1m> Building 50%[22m[3D[1m66%[22m[1m > :classes[22m[11D[0K[14D[0K:classes
+[1m> Building 66%[22m[3D[1m83%[22m[1m > :jar[22m[7D[0K[14D[0K:jar
+[1m> Building 83%[22m[3D[1m100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KBUILD SUCCESSFUL
+[1m> Building 100%[22m[15D[0K[1A[16C
+[1m> Building 100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KTotal time: 3.735 secs
+[1m> Building 100%[22m[15D[0K
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.6/userguide/gradle_daemon.html
+[0m]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ java -jar 
+build/   .gradle/ src/     
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ java -jar build/
+classes/ libs/    tmp/     
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ java -jar build/libs/groovyPlugin.jar 
+Error: Could not find or load main class demo.App
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ gradle tasks
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=1512m; support was removed in 8.0
+[0m[1m> Loading[22m[1m > settings[22m[11D[0K[7D[1mConfiguring[22m[1m > 0/1 projects[22m[1m > root project[22m[15D[0K[12D[1m1/1 projects[22m[15D[0K[13D[0K[1m> Building 0%[22m[1m > :tasks[22m[22D[0K:tasks
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0K------------------------------------------------------------
+[1m> Building 0% > :tasks[22m[22D[0KAll tasks runnable from root project
+[1m> Building 0% > :tasks[22m[22D[0K------------------------------------------------------------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[60C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KBuild tasks
+[1m> Building 0% > :tasks[22m[22D[0K-----------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[11C
+[1m> Building 0% > :tasks[22m[22D[0K[32massemble[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[8C[33m - Assembles the outputs of this project.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[49C
+[1m> Building 0% > :tasks[22m[22D[0K[32mbuild[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[5C[33m - Assembles and tests this project.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[41C
+[1m> Building 0% > :tasks[22m[22D[0K[32mbuildDependents[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[15C[33m - Assembles and tests this project and all projects that depend on it.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[86C
+[1m> Building 0% > :tasks[22m[22D[0K[32mbuildNeeded[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[11C[33m - Assembles and tests this project and all projects it depends on.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[78C
+[1m> Building 0% > :tasks[22m[22D[0K[32mclasses[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[7C[33m - Assembles classes 'main'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[35C
+[1m> Building 0% > :tasks[22m[22D[0K[32mclean[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[5C[33m - Deletes the build directory.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[36C
+[1m> Building 0% > :tasks[22m[22D[0K[32mjar[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[3C[33m - Assembles a jar archive containing the main classes.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[58C
+[1m> Building 0% > :tasks[22m[22D[0K[32mtestClasses[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[11C[33m - Assembles classes 'test'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[39C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KBuild Setup tasks
+[1m> Building 0% > :tasks[22m[22D[0K-----------------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[17C
+[1m> Building 0% > :tasks[22m[22D[0K[32minit[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[4C[33m - Initializes a new Gradle build. [incubating][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[51C
+[1m> Building 0% > :tasks[22m[22D[0K[32mwrapper[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[7C[33m - Generates Gradle wrapper files. [incubating][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[54C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KDocumentation tasks
+[1m> Building 0% > :tasks[22m[22D[0K-------------------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[19C
+[1m> Building 0% > :tasks[22m[22D[0K[32mgroovydoc[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[9C[33m - Generates Groovydoc API documentation for the main source code.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[75C
+[1m> Building 0% > :tasks[22m[22D[0K[32mjavadoc[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[7C[33m - Generates Javadoc API documentation for the main source code.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[71C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KHelp tasks
+[1m> Building 0% > :tasks[22m[22D[0K----------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[10C
+[1m> Building 0% > :tasks[22m[22D[0K[32mcomponents[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[10C[33m - Displays the components produced by root project 'groovyPlugin'. [incubating][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[90C
+[1m> Building 0% > :tasks[22m[22D[0K[32mdependencies[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[12C[33m - Displays all dependencies declared in root project 'groovyPlugin'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[81C
+[1m> Building 0% > :tasks[22m[22D[0K[32mdependencyInsight[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[17C[33m - Displays the insight into a specific dependency in root project 'groovyPlugin'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[99C
+[1m> Building 0% > :tasks[22m[22D[0K[32mhelp[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[4C[33m - Displays a help message.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[31C
+[1m> Building 0% > :tasks[22m[22D[0K[32mmodel[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[5C[33m - Displays the configuration model of root project 'groovyPlugin'. [incubating][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[85C
+[1m> Building 0% > :tasks[22m[22D[0K[32mprojects[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[8C[33m - Displays the sub-projects of root project 'groovyPlugin'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[68C
+[1m> Building 0% > :tasks[22m[22D[0K[32mproperties[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[10C[33m - Displays the properties of root project 'groovyPlugin'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[68C
+[1m> Building 0% > :tasks[22m[22D[0K[32mtasks[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[5C[33m - Displays the tasks runnable from root project 'groovyPlugin'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[69C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KVerification tasks
+[1m> Building 0% > :tasks[22m[22D[0K------------------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[18C
+[1m> Building 0% > :tasks[22m[22D[0K[32mcheck[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[5C[33m - Runs all checks.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[24C
+[1m> Building 0% > :tasks[22m[22D[0K[32mtest[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[4C[33m - Runs the unit tests.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[27C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KOther tasks
+[1m> Building 0% > :tasks[22m[22D[0K-----------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[11C
+[1m> Building 0% > :tasks[22m[22D[0K[32mrunApp[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[6C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KRules
+[1m> Building 0% > :tasks[22m[22D[0K-----
+[1m> Building 0% > :tasks[22m[22D[0K[1A[5C
+[1m> Building 0% > :tasks[22m[22D[0KPattern: clean<TaskName>: Cleans the output files of a task.
+[1m> Building 0% > :tasks[22m[22D[0KPattern: build<ConfigurationName>: Assembles the artifacts of a configuration.
+[1m> Building 0% > :tasks[22m[22D[0KPattern: upload<ConfigurationName>: Assembles and uploads the artifacts belonging to a configuration.
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KTo see all tasks and more detail, run 
+[1m> Building 0% > :tasks[22m[22D[0K[1A[38C[1mgradle[22m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[44C[1m [22m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[45C[1mtasks --all[22m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[56C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KTo see more detail about a task, run 
+[1m> Building 0% > :tasks[22m[22D[0K[1A[37C[1mgradle[22m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[43C[1m [22m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[44C[1mhelp --task <task>[22m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[62C
+[1m> Building 0% > :tasks[22m[9D[0K[2D[1m100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KBUILD SUCCESSFUL
+[1m> Building 100%[22m[15D[0K[1A[16C
+[1m> Building 100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KTotal time: 2.745 secs
+[1m> Building 100%[22m[15D[0K
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.6/userguide/gradle_daemon.html
+[0m]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ gradle tasks[H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ gradle tasks -a[K-all
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=1512m; support was removed in 8.0
+[0m[1m> Loading[22m[1m > settings[22m[11D[0K[7D[1mConfiguring[22m[1m > 0/1 projects[22m[1m > root project[22m[15D[0K[12D[1m1/1 projects[22m[15D[0K[13D[0K[1m> Building 0%[22m[1m > :tasks[22m[22D[0K:tasks
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0K------------------------------------------------------------
+[1m> Building 0% > :tasks[22m[22D[0KAll tasks runnable from root project
+[1m> Building 0% > :tasks[22m[22D[0K------------------------------------------------------------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[60C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KBuild tasks
+[1m> Building 0% > :tasks[22m[22D[0K-----------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[11C
+[1m> Building 0% > :tasks[22m[22D[0K[32massemble[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[8C[33m - Assembles the outputs of this project.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[49C[33m [jar][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[55C
+[1m> Building 0% > :tasks[22m[22D[0K[32mbuild[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[5C[33m - Assembles and tests this project.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[41C[33m [assemble, check][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[59C
+[1m> Building 0% > :tasks[22m[22D[0K[32mbuildDependents[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[15C[33m - Assembles and tests this project and all projects that depend on it.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[86C[33m [build][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[94C
+[1m> Building 0% > :tasks[22m[22D[0K[32mbuildNeeded[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[11C[33m - Assembles and tests this project and all projects it depends on.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[78C[33m [build][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[86C
+[1m> Building 0% > :tasks[22m[22D[0K[32mclasses[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[7C[33m - Assembles classes 'main'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[35C
+[1m> Building 0% > :tasks[22m[22D[0K    
+[1m> Building 0% > :tasks[22m[22D[0K[1A[4C[32mcompileGroovy[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[17C[33m - Compiles the main Groovy source.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[52C
+[1m> Building 0% > :tasks[22m[22D[0K    
+[1m> Building 0% > :tasks[22m[22D[0K[1A[4C[32mcompileJava[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[15C[33m - Compiles Java source 'main:java'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[51C
+[1m> Building 0% > :tasks[22m[22D[0K    
+[1m> Building 0% > :tasks[22m[22D[0K[1A[4C[32mprocessResources[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[20C[33m - Processes JVM resources 'main:resources'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[64C
+[1m> Building 0% > :tasks[22m[22D[0K[32mclean[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[5C[33m - Deletes the build directory.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[36C
+[1m> Building 0% > :tasks[22m[22D[0K[32mjar[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[3C[33m - Assembles a jar archive containing the main classes.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[58C[33m [classes][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[68C
+[1m> Building 0% > :tasks[22m[22D[0K[32mtestClasses[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[11C[33m - Assembles classes 'test'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[39C[33m [classes][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[49C
+[1m> Building 0% > :tasks[22m[22D[0K    
+[1m> Building 0% > :tasks[22m[22D[0K[1A[4C[32mcompileTestGroovy[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[21C[33m - Compiles the test Groovy source.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[56C
+[1m> Building 0% > :tasks[22m[22D[0K    
+[1m> Building 0% > :tasks[22m[22D[0K[1A[4C[32mcompileTestJava[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[19C[33m - Compiles Java source 'test:java'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[55C
+[1m> Building 0% > :tasks[22m[22D[0K    
+[1m> Building 0% > :tasks[22m[22D[0K[1A[4C[32mprocessTestResources[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[24C[33m - Processes JVM resources 'test:resources'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[68C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KBuild Setup tasks
+[1m> Building 0% > :tasks[22m[22D[0K-----------------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[17C
+[1m> Building 0% > :tasks[22m[22D[0K[32minit[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[4C[33m - Initializes a new Gradle build. [incubating][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[51C
+[1m> Building 0% > :tasks[22m[22D[0K[32mwrapper[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[7C[33m - Generates Gradle wrapper files. [incubating][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[54C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KDocumentation tasks
+[1m> Building 0% > :tasks[22m[22D[0K-------------------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[19C
+[1m> Building 0% > :tasks[22m[22D[0K[32mgroovydoc[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[9C[33m - Generates Groovydoc API documentation for the main source code.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[75C[33m [classes][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[85C
+[1m> Building 0% > :tasks[22m[22D[0K[32mjavadoc[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[7C[33m - Generates Javadoc API documentation for the main source code.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[71C[33m [classes][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[81C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KHelp tasks
+[1m> Building 0% > :tasks[22m[22D[0K----------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[10C
+[1m> Building 0% > :tasks[22m[22D[0K[32mcomponents[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[10C[33m - Displays the components produced by root project 'groovyPlugin'. [incubating][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[90C
+[1m> Building 0% > :tasks[22m[22D[0K[32mdependencies[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[12C[33m - Displays all dependencies declared in root project 'groovyPlugin'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[81C
+[1m> Building 0% > :tasks[22m[22D[0K[32mdependencyInsight[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[17C[33m - Displays the insight into a specific dependency in root project 'groovyPlugin'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[99C
+[1m> Building 0% > :tasks[22m[22D[0K[32mhelp[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[4C[33m - Displays a help message.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[31C
+[1m> Building 0% > :tasks[22m[22D[0K[32mmodel[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[5C[33m - Displays the configuration model of root project 'groovyPlugin'. [incubating][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[85C
+[1m> Building 0% > :tasks[22m[22D[0K[32mprojects[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[8C[33m - Displays the sub-projects of root project 'groovyPlugin'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[68C
+[1m> Building 0% > :tasks[22m[22D[0K[32mproperties[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[10C[33m - Displays the properties of root project 'groovyPlugin'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[68C
+[1m> Building 0% > :tasks[22m[22D[0K[32mtasks[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[5C[33m - Displays the tasks runnable from root project 'groovyPlugin'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[69C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KVerification tasks
+[1m> Building 0% > :tasks[22m[22D[0K------------------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[18C
+[1m> Building 0% > :tasks[22m[22D[0K[32mcheck[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[5C[33m - Runs all checks.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[24C[33m [test][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[31C
+[1m> Building 0% > :tasks[22m[22D[0K[32mtest[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[4C[33m - Runs the unit tests.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[27C[33m [classes, testClasses][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[50C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KOther tasks
+[1m> Building 0% > :tasks[22m[22D[0K-----------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[11C
+[1m> Building 0% > :tasks[22m[22D[0K[32mrunApp[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[6C[33m [classes][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[16C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KRules
+[1m> Building 0% > :tasks[22m[22D[0K-----
+[1m> Building 0% > :tasks[22m[22D[0K[1A[5C
+[1m> Building 0% > :tasks[22m[22D[0KPattern: clean<TaskName>: Cleans the output files of a task.
+[1m> Building 0% > :tasks[22m[22D[0KPattern: build<ConfigurationName>: Assembles the artifacts of a configuration.
+[1m> Building 0% > :tasks[22m[22D[0KPattern: upload<ConfigurationName>: Assembles and uploads the artifacts belonging to a configuration.
+[1m> Building 0% > :tasks[22m[9D[0K[2D[1m100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KBUILD SUCCESSFUL
+[1m> Building 100%[22m[15D[0K[1A[16C
+[1m> Building 100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KTotal time: 2.804 secs
+[1m> Building 100%[22m[15D[0K
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.6/userguide/gradle_daemon.html
+[0m]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ ca[K[Kgradle clean
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=1512m; support was removed in 8.0
+[0m[1m> Loading[22m[1m > settings[22m[11D[0K[7D[1mConfiguring[22m[1m > 0/1 projects[22m[1m > root project[22m[15D[0K[12D[1m1/1 projects[22m[15D[0K[13D[0K[1m> Building 0%[22m[1m > :clean[22m[9D[0K[13D[0K:clean
+[1m> Building 0%[22m[2D[1m100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KBUILD SUCCESSFUL
+[1m> Building 100%[22m[15D[0K[1A[16C
+[1m> Building 100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KTotal time: 2.543 secs
+[1m> Building 100%[22m[15D[0K
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.6/userguide/gradle_daemon.html
+[0m]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ gradle[K[K[K[K[K[Kcat build.gradle 
+
+apply plugin: 'groovy'
+
+task runApp(type: JavaExec) {
+	main = "demo.App"
+	classpath sourceSets.main.runtimeClasspath
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	//compile 'org.codehaus.groovy:groovy-all:2.3.6'
+	compile localGroovy()
+}
+
+jar {
+	from files(sourceSets.main.output.classesDir)
+	manifest.attributes "Main-Class": "demo.App"
+}
+
+//fatJar {
+//	manifest.attributes "Main-Class": "demo.App"
+//}
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ tree[K[K[K[Kree
+The program 'ree' is currently not installed. You can install it by typing:
+sudo apt-get install ree
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ reetree
+[01;34m.[00m
+|-- build.gradle
+`-- [01;34msrc[00m
+    `-- [01;34mmain[00m
+        `-- [01;34mgroovy[00m
+            `-- [01;34mdemo[00m
+                `-- App.groovy
+
+4 directories, 2 files
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ 
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ 
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ 
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ 
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ 
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ 
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ 
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ 
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ 
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ 
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ 
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ cat build.gradle 
+
+apply plugin: 'groovy'
+
+task runApp(type: JavaExec) {
+	main = "demo.App"
+	classpath sourceSets.main.runtimeClasspath
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	//compile 'org.codehaus.groovy:groovy-all:2.3.6'
+	compile localGroovy()
+}
+
+jar {
+	from configurations.runtime.asFileTree.files.collect { zipTree(it)}
+	manifest.attributes "Main-Class": "demo.App"
+}
+
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/groovyPluginape@zoo:~/ideaProjects/GradleExamples/plugins/groovyPlugin$ cd ../
+]0;ape@zoo: ~/ideaProjects/GradleExamples/pluginsape@zoo:~/ideaProjects/GradleExamples/plugins$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/pluginsape@zoo:~/ideaProjects/GradleExamples/plugins$ 
+]0;ape@zoo: ~/ideaProjects/GradleExamples/pluginsape@zoo:~/ideaProjects/GradleExamples/plugins$ cd[K[Kls
+[0m[01;34mgroovyPlugin[0m         [01;34mjavaPlugin[0m              [01;34mjavaPluginSourceDiff[0m  [01;34mscript[0m      [01;34mwarPlugin[0m
+[01;31mgroovyPlugin.tar.gz[0m  [01;34mjavaPluginNewSourceSet[0m  [01;31mplugins-java.tar.gz[0m   typescript
+]0;ape@zoo: ~/ideaProjects/GradleExamples/pluginsape@zoo:~/ideaProjects/GradleExamples/plugins$ cd jett[K[K[K[KwarPlugin/
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ ls
+[0m[01;34mbuild[0m  build.gradle  [01;34msrc[0m
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ gd clean
+gd: command not found
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ gd clean[1P clean[1P cleanr cleane clean[1P clean[1P cleang cleanr cleane cleana cleand cleanl clean[1P clean[1P clean[1P cleand clean[1P clean[1P cleana cleand cleanl cleane clean
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=1512m; support was removed in 8.0
+[0m[1m> Loading[22m[1m > settings[22m[11D[0K[7D[1mConfiguring[22m[1m > 0/1 projects[22m[1m > root project[22m[1m > Compiling script into cache[22m[30D[0K[1m > Compiling script into cache[22m[30D[0K[15D[0K[12D[1m1/1 projects[22m[15D[0K[13D[0K[1m> Building 0%[22m[1m > :clean[22m[9D[0K[13D[0K:clean
+[1m> Building 0%[22m[2D[1m100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KBUILD SUCCESSFUL
+[1m> Building 100%[22m[15D[0K[1A[16C
+[1m> Building 100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KTotal time: 3.072 secs
+[1m> Building 100%[22m[15D[0K
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.6/userguide/gradle_daemon.html
+[0m]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ tree
+[01;34m.[00m
+|-- build.gradle
+`-- [01;34msrc[00m
+    `-- [01;34mmain[00m
+        |-- [01;34mjava[00m
+        |   `-- [01;34mdemo[00m
+        |       `-- MainServlet.java
+        `-- [01;34mwebapp[00m
+            |-- index.jsp
+            `-- [01;34mWEB-INF[00m
+                `-- web.xml
+
+6 directories, 4 files
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ vim src/main/
+java/   webapp/ 
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ vim src/main/java/demo/MainServlet.java 
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;42r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[42;1H"src/main/java/demo/MainServlet.java" 13L, 412C[>c[1;1H[35mpackage[m demo;
+
+[35mimport[m javax.servlet.*;
+[35mimport[m javax.servlet.http.*;
+[35mimport[m java.io.*;
+
+[32mpublic[m [32mclass[m MainServlet [32mextends[m HttpServlet {[8;9H[32mpublic[m [32mvoid[m doGet(HttpServletRequest request, HttpServletResponse response) [32mthrows[m IOException, ServletException {[9;17HString name = request.getParameter([31m"name"[m);[10;17Hrequest.setAttribute([31m"NAME"[m, name);[11;17Hrequest.getRequestDispatcher([31m"/index.jsp"[m).forward(request, response);[12;9H}
+}
+[1m[34m~                                                                                                                              [15;1H~                                                                                                                              [16;1H~                                                                                                                              [17;1H~                                                                                                                              [18;1H~                                                                                                                              [19;1H~                                                                                                                              [20;1H~                                                                                                                              [21;1H~                                                                                                                              [22;1H~                                                                                                                              [23;1H~                                                                                                                              [24;1H~                                                                                                                              [25;1H~                                                                                                                              [26;1H~                                                                                                                              [27;1H~                                                                                                                              [28;1H~                                                                                                                              [29;1H~                                                                                                                              [30;1H~                                                                                                                              [31;1H~                                                                                                                              [32;1H~                                                                                                                              [33;1H~                                                                                                                              [34;1H~                                                                                                                              [35;1H~                                                                                                                              [36;1H~                                                                                                                              [37;1H~                                                                                                                              [38;1H~                                                                                                                              [39;1H~                                                                                                                              [40;1H~                                                                                                                              [41;1H~                                                                                                                              [m[42;110H1,1[11CAll[1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[42;110H2,0-1[2;1H[?12l[?25h[?25l[42;110H3,1  [3;1H[?12l[?25h[?25l[42;110H4[4;1H[?12l[?25h[?25l[42;110H5[5;1H[?12l[?25h[?25l[42;110H6,0-1[6;1H[?12l[?25h[?25l[42;1H[K[42;1H:[?12l[?25hq[?25l[?12l[?25h[?25l[42;1H[K[42;1H[?1l>[?12l[?25h[?1049l]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ vim build.gradle 
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;42r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[42;1H"build.gradle" 26L, 331C[>c[1;1Happly plugin: 'war'
+apply plugin: 'jetty'
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+}
+
+dependencies {
+  compile "javax.servlet:servlet-api:2.5"
+}
+
+
+httpPort = 8080
+stopPort = 9080
+stopKey = "stopKey"
+
+
+war {
+  baseName = "GRADLE-WEB-APP"
+  appendix = "DEMO"
+  version = "1.0"
+  classifier = "SNAPSHOT"
+  extension = "ear"
+}
+
+[1m[34m~                                                                                                                              [28;1H~                                                                                                                              [29;1H~                                                                                                                              [30;1H~                                                                                                                              [31;1H~                                                                                                                              [32;1H~                                                                                                                              [33;1H~                                                                                                                              [34;1H~                                                                                                                              [35;1H~                                                                                                                              [36;1H~                                                                                                                              [37;1H~                                                                                                                              [38;1H~                                                                                                                              [39;1H~                                                                                                                              [40;1H~                                                                                                                              [41;1H~                                                                                                                              [m[42;110H1,1[11CAll[1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[42;110H2[2;1H[?12l[?25h[?25l[42;110H1[1;1H[?12l[?25h[?25l[42;110H2[2;1H[?12l[?25h[?25l[42;110H3,0-1[3;1H[?12l[?25h[?25l[42;110H4,1  [4;1H[?12l[?25h[?25l[42;110H5[5;1H[?12l[?25h[?25l[42;110H6[6;1H[?12l[?25h[?25l[4;14H[46m{
+
+
+}[m[42;110H7[7;1H[?12l[?25h[?25l[4;14H{
+
+
+}[42;110H8,0-1[8;1H[?12l[?25h[?25l[42;110H9,1  [9;1H[?12l[?25h[?25l[42;110H10,1[10;1H[?12l[?25h[?25l[9;14H[46m{
+
+}[m[42;111H1[11;1H[?12l[?25h[?25l[9;14H{
+
+}[42;111H2,0-1[12;1H[?12l[?25h[?25l[42;111H3[13;1H[?12l[?25h[?25l[42;111H4,1  [14;1H[?12l[?25h[?25l[42;111H5[15;1H[?12l[?25h[?25l[42;111H6[16;1H[?12l[?25h[?25l[42;111H5[15;1H[?12l[?25h[?25l[42;111H4[14;1H[?12l[?25h[?25l[42;111H3,0-1[13;1H[?12l[?25h[?25l[42;111H4,1  [14;1H[?12l[?25h[?25l[42;111H5[15;1H[?12l[?25h[?25l[42;111H6[16;1H[?12l[?25h[?25l[42;111H7,0-1[17;1H[?12l[?25h[?25l[42;111H8[18;1H[?12l[?25h[?25l[42;111H9,1  [19;1H[?12l[?25h[?25l[42;113H2[19;2H[?12l[?25h[?25l[42;113H3[19;3H[?12l[?25h[?25l[42;110H20[20;3H[?12l[?25h[?25l[42;113H4[20;4H[?12l[?25h[?25l[42;113H5[20;5H[?12l[?25h[?25l[42;111H1[21;5H[?12l[?25h[?25l[42;111H2[22;5H[?12l[?25h[?25l[42;111H3[23;5H[?12l[?25h[?25l[42;111H4[24;5H[?12l[?25h[?25l[42;113H6[24;6H[?12l[?25h[?25l[42;113H7[24;7H[?12l[?25h[?25l[42;113H8[24;8H[?12l[?25h[?25l[42;113H9[24;9H[?12l[?25h[?25l[42;113H10[24;10H[?12l[?25h[?25l[42;114H1[24;11H[?12l[?25h[?25l[42;114H2[24;12H[?12l[?25h[?25l[42;111H3[23;12H[?12l[?25h[?25l[42;1H[K[42;1H:[?12l[?25hq[?25l[?12l[?25h[?25l[42;1H[K[42;1H[?1l>[?12l[?25h[?1049l]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ gr[K[Kcat [13@vim build.gradle[C
+[?1049h[?1h=[2;1H▽[6n[1;1H  [1;1H[1;42r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[42;1H"build.gradle" 26L, 331C[>c[1;1Happly plugin: 'war'
+apply plugin: 'jetty'
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+}
+
+dependencies {
+  compile "javax.servlet:servlet-api:2.5"
+}
+
+
+httpPort = 8080
+stopPort = 9080
+stopKey = "stopKey"
+
+
+war {
+  baseName = "GRADLE-WEB-APP"
+  appendix = "DEMO"
+  version = "1.0"
+  classifier = "SNAPSHOT"
+  extension = "ear"
+}
+
+[1m[34m~                                                                                                                              [28;1H~                                                                                                                              [29;1H~                                                                                                                              [30;1H~                                                                                                                              [31;1H~                                                                                                                              [32;1H~                                                                                                                              [33;1H~                                                                                                                              [34;1H~                                                                                                                              [35;1H~                                                                                                                              [36;1H~                                                                                                                              [37;1H~                                                                                                                              [38;1H~                                                                                                                              [39;1H~                                                                                                                              [40;1H~                                                                                                                              [41;1H~                                                                                                                              [m[42;110H1,1[11CAll[1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[42;110H2[2;1H[?12l[?25h[?25l[42;110H3,0-1[3;1H[?12l[?25h[?25l[42;110H4,1  [4;1H[?12l[?25h[?25l[42;110H5[5;1H[?12l[?25h[?25l[42;110H6[6;1H[?12l[?25h[?25l[4;14H[46m{
+
+
+}[m[42;110H7[7;1H[?12l[?25h[?25l[4;14H{
+
+
+}[42;110H8,0-1[8;1H[?12l[?25h[?25l[42;110H9,1  [9;1H[?12l[?25h[?25l[42;110H10,1[10;1H[?12l[?25h[?25l[9;14H[46m{
+
+}[m[42;111H1[11;1H[?12l[?25h[?25l[9;14H{
+
+}[42;111H2,0-1[12;1H[?12l[?25h[?25l[42;111H3[13;1H[?12l[?25h[?25l[42;111H4,1  [14;1H[?12l[?25h[?25l[42;111H5[15;1H[?12l[?25h[?25l[42;111H6[16;1H[?12l[?25h[?25l[42;111H5[15;1H[?12l[?25h[?25l[42;111H6[16;1H[?12l[?25h[?25l[42;111H5[15;1H[?12l[?25h[?25l[42;111H4[14;1H[?12l[?25h[?25l[42;111H3,0-1[13;1H[?12l[?25h[?25l[42;1H[K[42;1H:[?12l[?25hq[?25l[?12l[?25h[?25l[42;1H[K[42;1H[?1l>[?12l[?25h[?1049l]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ gras[Kdle tasks
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=1512m; support was removed in 8.0
+[0m[1m> Loading[22m[1m > settings[22m[11D[0K[7D[1mConfiguring[22m[1m > 0/1 projects[22m[1m > root project[22m[15D[0K[12D[1m1/1 projects[22m[15D[0K[13D[0K[1m> Building 0%[22m[1m > :tasks[22m[22D[0K:tasks
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0K------------------------------------------------------------
+[1m> Building 0% > :tasks[22m[22D[0KAll tasks runnable from root project
+[1m> Building 0% > :tasks[22m[22D[0K------------------------------------------------------------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[60C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KBuild tasks
+[1m> Building 0% > :tasks[22m[22D[0K-----------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[11C
+[1m> Building 0% > :tasks[22m[22D[0K[32massemble[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[8C[33m - Assembles the outputs of this project.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[49C
+[1m> Building 0% > :tasks[22m[22D[0K[32mbuild[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[5C[33m - Assembles and tests this project.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[41C
+[1m> Building 0% > :tasks[22m[22D[0K[32mbuildDependents[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[15C[33m - Assembles and tests this project and all projects that depend on it.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[86C
+[1m> Building 0% > :tasks[22m[22D[0K[32mbuildNeeded[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[11C[33m - Assembles and tests this project and all projects it depends on.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[78C
+[1m> Building 0% > :tasks[22m[22D[0K[32mclasses[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[7C[33m - Assembles classes 'main'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[35C
+[1m> Building 0% > :tasks[22m[22D[0K[32mclean[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[5C[33m - Deletes the build directory.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[36C
+[1m> Building 0% > :tasks[22m[22D[0K[32mjar[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[3C[33m - Assembles a jar archive containing the main classes.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[58C
+[1m> Building 0% > :tasks[22m[22D[0K[32mtestClasses[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[11C[33m - Assembles classes 'test'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[39C
+[1m> Building 0% > :tasks[22m[22D[0K[32mwar[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[3C[33m - Generates a war archive with all the compiled classes, the web-app content and the libraries.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[99C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KBuild Setup tasks
+[1m> Building 0% > :tasks[22m[22D[0K-----------------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[17C
+[1m> Building 0% > :tasks[22m[22D[0K[32minit[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[4C[33m - Initializes a new Gradle build. [incubating][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[51C
+[1m> Building 0% > :tasks[22m[22D[0K[32mwrapper[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[7C[33m - Generates Gradle wrapper files. [incubating][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[54C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KDocumentation tasks
+[1m> Building 0% > :tasks[22m[22D[0K-------------------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[19C
+[1m> Building 0% > :tasks[22m[22D[0K[32mjavadoc[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[7C[33m - Generates Javadoc API documentation for the main source code.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[71C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KHelp tasks
+[1m> Building 0% > :tasks[22m[22D[0K----------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[10C
+[1m> Building 0% > :tasks[22m[22D[0K[32mcomponents[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[10C[33m - Displays the components produced by root project 'warPlugin'. [incubating][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[87C
+[1m> Building 0% > :tasks[22m[22D[0K[32mdependencies[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[12C[33m - Displays all dependencies declared in root project 'warPlugin'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[78C
+[1m> Building 0% > :tasks[22m[22D[0K[32mdependencyInsight[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[17C[33m - Displays the insight into a specific dependency in root project 'warPlugin'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[96C
+[1m> Building 0% > :tasks[22m[22D[0K[32mhelp[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[4C[33m - Displays a help message.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[31C
+[1m> Building 0% > :tasks[22m[22D[0K[32mmodel[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[5C[33m - Displays the configuration model of root project 'warPlugin'. [incubating][39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[82C
+[1m> Building 0% > :tasks[22m[22D[0K[32mprojects[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[8C[33m - Displays the sub-projects of root project 'warPlugin'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[65C
+[1m> Building 0% > :tasks[22m[22D[0K[32mproperties[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[10C[33m - Displays the properties of root project 'warPlugin'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[65C
+[1m> Building 0% > :tasks[22m[22D[0K[32mtasks[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[5C[33m - Displays the tasks runnable from root project 'warPlugin'.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[66C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KVerification tasks
+[1m> Building 0% > :tasks[22m[22D[0K------------------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[18C
+[1m> Building 0% > :tasks[22m[22D[0K[32mcheck[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[5C[33m - Runs all checks.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[24C
+[1m> Building 0% > :tasks[22m[22D[0K[32mtest[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[4C[33m - Runs the unit tests.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[27C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KWeb application tasks
+[1m> Building 0% > :tasks[22m[22D[0K---------------------
+[1m> Building 0% > :tasks[22m[22D[0K[1A[21C
+[1m> Building 0% > :tasks[22m[22D[0K[32mjettyRun[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[8C[33m - Uses your files as and where they are and deploys them to Jetty.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[75C
+[1m> Building 0% > :tasks[22m[22D[0K[32mjettyRunWar[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[11C[33m - Assembles the webapp into a war and deploys it to Jetty.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[70C
+[1m> Building 0% > :tasks[22m[22D[0K[32mjettyStop[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[9C[33m - Stops Jetty.[39m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[24C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KRules
+[1m> Building 0% > :tasks[22m[22D[0K-----
+[1m> Building 0% > :tasks[22m[22D[0K[1A[5C
+[1m> Building 0% > :tasks[22m[22D[0KPattern: clean<TaskName>: Cleans the output files of a task.
+[1m> Building 0% > :tasks[22m[22D[0KPattern: build<ConfigurationName>: Assembles the artifacts of a configuration.
+[1m> Building 0% > :tasks[22m[22D[0KPattern: upload<ConfigurationName>: Assembles and uploads the artifacts belonging to a configuration.
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KTo see all tasks and more detail, run 
+[1m> Building 0% > :tasks[22m[22D[0K[1A[38C[1mgradle[22m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[44C[1m [22m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[45C[1mtasks --all[22m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[56C
+[1m> Building 0% > :tasks[22m[22D[0K
+[1m> Building 0% > :tasks[22m[22D[0KTo see more detail about a task, run 
+[1m> Building 0% > :tasks[22m[22D[0K[1A[37C[1mgradle[22m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[43C[1m [22m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[44C[1mhelp --task <task>[22m
+[1m> Building 0% > :tasks[22m[22D[0K[1A[62C
+[1m> Building 0% > :tasks[22m[9D[0K[2D[1m100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KBUILD SUCCESSFUL
+[1m> Building 100%[22m[15D[0K[1A[16C
+[1m> Building 100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KTotal time: 2.493 secs
+[1m> Building 100%[22m[15D[0K
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.6/userguide/gradle_daemon.html
+[0m]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ gradle r[Kjett[H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ gradle jettyRun
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=1512m; support was removed in 8.0
+[0m[1m> Loading[22m[1m > settings[22m[11D[0K[7D[1mConfiguring[22m[1m > 0/1 projects[22m[1m > root project[22m[15D[0K[12D[1m1/1 projects[22m[15D[0K[13D[0K[1m> Building 0%[22m[1m > :compileJava[22m[1m > Resolving dependencies ':compile'[22m[64D[0K:compileJava
+[1m> Building 0% > :compileJava > Resolving dependencies ':compile'[22m[64D[0KDownload https://repo1.maven.org/maven2/javax/servlet/servlet-api/2.5/servlet-api-2.5.pom
+[1m> Building 0% > :compileJava > Resolving dependencies ':compile'[22m[64D[0K[1A[89C
+[1m> Building 0% > :compileJava > Resolving dependencies ':compile'[22m[36D[0K[28D[0KDownload https://repo1.maven.org/maven2/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar
+[1m> Building 0% > :compileJava[22m[1m > 7 KB/102 KB downloaded[22m[22D[1m15 KB/102 KB downloaded[22m[23D[1m23 KB/102 KB downloaded[22m[23D[1m31 KB/102 KB downloaded[22m[22D[1m9 KB/102 KB downloaded[22m[23D[1m47 KB/102 KB downloaded[22m[23D[1m55 KB/102 KB downloaded[22m[23D[1m63 KB/102 KB downloaded[22m[23D[1m71 KB/102 KB downloaded[22m[22D[1m9 KB/102 KB downloaded[22m[23D[1m87 KB/102 KB downloaded[22m[23D[1m95 KB/102 KB downloaded[22m[23D[1m102 KB/102 KB downloaded[22m[27D[0K[28D[0K[1A[89C
+[1m> Building 0% > :compileJava[22m[15D[0K[2D[1m25%[22m[1m > :processResources[22m[20D[0K[14D[0K:processResources 
+[1m> Building 25%[22m[14D[0K[1A[18C[33mUP-TO-DATE[39m
+[1m> Building 25%[22m[14D[0K[1A[28C
+[1m> Building 25%[22m[3D[1m50%[22m[1m > :classes[22m[11D[0K[14D[0K:classes
+[1m> Building 50%[22m[3D[1m75%[22m[1m > :jettyRun[22m[1m > Starting Jetty[22m[1m > Resolving dependencies ':runtime'[22m[36D[0K[17D[0K[1m > Running at http://localhost:8080/GRADLE-WEB-APP[22m^C[0m[50D[0K[12D[0K[14D[0K:jettyRun
+[1m> Building 75%[22m[3D[1m100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KBUILD SUCCESSFUL
+[1m> Building 100%[22m[15D[0K[1A[16C
+[1m> Building 100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KTotal time: 34.656 secs
+[1m> Building 100%[22m[15D[0K
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.6/userguide/gradle_daemon.html
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ cat src/main/
+java/   webapp/ 
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ cat src/main/java/demo/MainServlet.java 
+package demo;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.io.*;
+
+public class MainServlet extends HttpServlet {
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+		String name = request.getParameter("name");
+		request.setAttribute("NAME", name);
+		request.getRequestDispatcher("/index.jsp").forward(request, response);
+	}
+}
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ cat src/main/java/demo/MainServlet.java [25Pgradle jettyRun
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=1512m; support was removed in 8.0
+[0m[1m> Loading[22m[1m > settings[22m[11D[0K[7D[1mConfiguring[22m[1m > 0/1 projects[22m[1m > root project[22m[15D[0K[12D[1m1/1 projects[22m[15D[0K[13D[0K[1m> Building 0%[22m[1m > :compileJava[22m[1m > Resolving dependencies ':compile'[22m[36D[0K[15D[0K[13D[0K:compileJava 
+[1m> Building 0%[22m[13D[0K[1A[13C[33mUP-TO-DATE[39m
+[1m> Building 0%[22m[13D[0K[1A[23C
+[1m> Building 0%[22m[2D[1m25%[22m[1m > :processResources[22m[20D[0K[14D[0K:processResources 
+[1m> Building 25%[22m[14D[0K[1A[18C[33mUP-TO-DATE[39m
+[1m> Building 25%[22m[14D[0K[1A[28C
+[1m> Building 25%[22m[3D[1m50%[22m[1m > :classes[22m[11D[0K[14D[0K:classes 
+[1m> Building 50%[22m[14D[0K[1A[9C[33mUP-TO-DATE[39m
+[1m> Building 50%[22m[14D[0K[1A[19C
+[1m> Building 50%[22m[3D[1m75%[22m[1m > :jettyRun[22m[1m > Starting Jetty[22m[1m > Resolving dependencies ':runtime'[22m[36D[0K[17D[0K[1m > Running at http://localhost:8080/GRADLE-WEB-APP[22m^C[0m[50D[0K[12D[0K[14D[0K:jettyRun
+[1m> Building 75%[22m[3D[1m100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KBUILD SUCCESSFUL
+[1m> Building 100%[22m[15D[0K[1A[16C
+[1m> Building 100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KTotal time: 42.708 secs
+[1m> Building 100%[22m[15D[0K
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.6/userguide/gradle_daemon.html
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ c[Kcat build.[K[K[K[K[K[K[K[K[K[K[H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ tree
+[01;34m.[00m
+|-- [01;34mbuild[00m
+|   |-- [01;34mclasses[00m
+|   |   `-- [01;34mmain[00m
+|   |       `-- [01;34mdemo[00m
+|   |           `-- MainServlet.class
+|   |-- [01;34mdependency-cache[00m
+|   `-- [01;34mtmp[00m
+|       |-- [01;34mcompileJava[00m
+|       |   `-- [01;34memptySourcePathRef[00m
+|       `-- [01;34mjettyRun[00m
+|           `-- [01;34mjsp[00m
+|               `-- [01;34morg[00m
+|                   `-- [01;34mapache[00m
+|                       `-- [01;34mjsp[00m
+|                           `-- index_jsp.class
+|-- build.gradle
+`-- [01;34msrc[00m
+    `-- [01;34mmain[00m
+        |-- [01;34mjava[00m
+        |   `-- [01;34mdemo[00m
+        |       `-- MainServlet.java
+        `-- [01;34mwebapp[00m
+            |-- index.jsp
+            `-- [01;34mWEB-INF[00m
+                `-- web.xml
+
+19 directories, 6 files
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ [H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ gradle clean
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=1512m; support was removed in 8.0
+[0m[1m> Loading[22m[1m > settings[22m[11D[0K[7D[1mConfiguring[22m[1m > 0/1 projects[22m[1m > root project[22mt[15D[0K[12D[1m1/1 projects[22m[15D[0K[13D[0K[1m> Building 0%[22m[1m > :clean[22m[9D[0K[13D[0K:clean
+[1m> Building 0%[22m[2D[1m100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KBUILD SUCCESSFUL
+[1m> Building 100%[22m[15D[0K[1A[16C
+[1m> Building 100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KTotal time: 2.311 secs
+[1m> Building 100%[22m[15D[0K
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.6/userguide/gradle_daemon.html
+[0m]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ tree[H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ tree
+[01;34m.[00m
+|-- build.gradle
+`-- [01;34msrc[00m
+    `-- [01;34mmain[00m
+        |-- [01;34mjava[00m
+        |   `-- [01;34mdemo[00m
+        |       `-- MainServlet.java
+        `-- [01;34mwebapp[00m
+            |-- index.jsp
+            `-- [01;34mWEB-INF[00m
+                `-- web.xml
+
+6 directories, 4 files
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ vim [K[K[K[Kcat sr[K[Ksrc/main/webapp/index.jsp 
+<html>
+<head>
+<title> WAR Plugin Test </title>
+</head>
+<body>
+	Hello <%=request.getAttribute("NAME")%> in Gradle world :) 
+</body>
+</html>
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ cat src/main/webapp/index.jsp [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kn/java/demo/MainServlet.java 
+package demo;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.io.*;
+
+public class MainServlet extends HttpServlet {
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+		String name = request.getParameter("name");
+		request.setAttribute("NAME", name);
+		request.getRequestDispatcher("/index.jsp").forward(request, response);
+	}
+}
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ cat src/main/java/demo/MainServlet.java [K[H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ cat build.gradle 
+apply plugin: 'war'
+apply plugin: 'jetty'
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+}
+
+dependencies {
+  compile "javax.servlet:servlet-api:2.5"
+}
+
+
+httpPort = 8080
+stopPort = 9080
+stopKey = "stopKey"
+
+
+war {
+  baseName = "GRADLE-WEB-APP"
+  appendix = "DEMO"
+  version = "1.0"
+  classifier = "SNAPSHOT"
+  extension = "ear"
+}
+
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ gradle war
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=1512m; support was removed in 8.0
+[0m[1m> Loading[22m[1m > settings[22m[11D[0K[7D[1mConfiguring[22m[1m > 0/1 projects[22m[1m > root project[22m[15D[0K[12D[1m1/1 projects[22m[15D[0K[13D[0K[1m> Building 0%[22m[1m > :compileJava[22m[1m > Resolving dependencies ':compile'[22m[36D[0K[15D[0K[13D[0K:compileJava
+[1m> Building 0%[22m[2D[1m25%[22m[1m > :processResources[22m[20D[0K[14D[0K:processResources 
+[1m> Building 25%[22m[14D[0K[1A[18C[33mUP-TO-DATE[39m
+[1m> Building 25%[22m[14D[0K[1A[28C
+[1m> Building 25%[22m[3D[1m50%[22m[1m > :classes[22m[11D[0K[14D[0K:classes
+[1m> Building 50%[22m[3D[1m75%[22m[1m > :war[22m[1m > Resolving dependencies ':runtime'[22m[36D[0K[1m > Resolving dependencies ':providedRuntime'[22m[44D[0K[7D[0K[14D[0K:war
+[1m> Building 75%[22m[3D[1m100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KBUILD SUCCESSFUL
+[1m> Building 100%[22m[15D[0K[1A[16C
+[1m> Building 100%[22m[15D[0K
+[1m> Building 100%[22m[15D[0KTotal time: 3.383 secs
+[1m> Building 100%[22m[15D[0K
+This build could be faster, please consider using the Gradle Daemon: https://docs.gradle.org/2.6/userguide/gradle_daemon.html
+[0m]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ tree[H[2J]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ tree
+[01;34m.[00m
+|-- [01;34mbuild[00m
+|   |-- [01;34mclasses[00m
+|   |   `-- [01;34mmain[00m
+|   |       `-- [01;34mdemo[00m
+|   |           `-- MainServlet.class
+|   |-- [01;34mdependency-cache[00m
+|   |-- [01;34mlibs[00m
+|   |   `-- [01;31mGRADLE-WEB-APP-DEMO-1.0-SNAPSHOT.ear[00m
+|   `-- [01;34mtmp[00m
+|       |-- [01;34mcompileJava[00m
+|       |   `-- [01;34memptySourcePathRef[00m
+|       `-- [01;34mwar[00m
+|           `-- MANIFEST.MF
+|-- build.gradle
+`-- [01;34msrc[00m
+    `-- [01;34mmain[00m
+        |-- [01;34mjava[00m
+        |   `-- [01;34mdemo[00m
+        |       `-- MainServlet.java
+        `-- [01;34mwebapp[00m
+            |-- index.jsp
+            `-- [01;34mWEB-INF[00m
+                `-- web.xml
+
+16 directories, 7 files
+]0;ape@zoo: ~/ideaProjects/GradleExamples/plugins/warPluginape@zoo:~/ideaProjects/GradleExamples/plugins/warPlugin$ cat build.gradle 
+apply plugin: 'war'
